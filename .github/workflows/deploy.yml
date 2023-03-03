@@ -18,9 +18,9 @@ jobs:
 
       - name: Install Dependencies
         run:
-          yarn add
-          yarn build
-          yarn export
+          npm run install
+          npm run build
+          npm run export
 
       - name: Push To Pages
         uses: JamesIves/github-pages-deploy-action@3.5.9
