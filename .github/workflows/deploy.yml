@@ -25,14 +25,14 @@ jobs:
         run:
           npm ci
           npm run build
-          npm run export
+          npm run export && ls
 
       - name: Push
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           ACCESS_TOKEN: ${{ secrets.TOKEN_FOR_IO }}
           BRANCH: master
-          FOLDER: out
+          FOLDER: website/build
           REPOSITORY_NAME: bourneo/bourneo.github.io
 #          TARGET_FOLDER: github-actions-demo # 打包的文件将放到静态服务器 github-actions-demo 目录下
 #        run: |
