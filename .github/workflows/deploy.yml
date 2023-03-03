@@ -1,15 +1,9 @@
 name: Deploy
 
-# on 定义的是执行该 Action 的时机，这里的配置是指：
-# 当 main 分支的 push 事件被触发的时候执行该任务
 on:
   push:
     branches: [ master ]
 
-# jobs 是定义你要运行的具体任务，
-# 每个 Action 可以有多个 Job
-# 每个 Job 可以有多个 Step
-# 每个 Step 又可以有多个 Run
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -29,13 +23,19 @@ jobs:
           yarn export
 
       - name: Push To Pages
-        working-directory: /out
-        run: |
-          git init
-          git checkout -b master
-          git add -A
-          # 这里把下面所有 `<YOUR_NAME>/<YOUR_EMAIL>/<COMMIT_MSG>/<YOUR_TOKEN>` 替换成你自己的就可以了
-          git -c user.name='b' -c user.email='e' commit -m 'up'
-          # 这里需要一个 共开仓库 的 secrets 配置，这里的 secrets 是一个环境变量，可以直接拿过来直接用
-          git remote add origin https://${{secrets.TOKEN_FOR_IO}}@github.com/bourneo/bourneo.github.io.git
-          git push origin main -f -q
+        uses: JamesIves/github-pages-deploy-action@3.5.9
+        with:
+          ACCESS_TOKEN: ${{ secrets.TOKEN_FOR_IO }}
+          BRANCH: master
+          FOLDER: out
+          REPOSITORY_NAME: bourneo/bourneo.github.io
+#          TARGET_FOLDER: github-actions-demo # 打包的文件将放到静态服务器 github-actions-demo 目录下
+#        run: |
+#          git init
+#          git checkout -b master
+#          git add -A
+#          # 这里把下面所有 `<YOUR_NAME>/<YOUR_EMAIL>/<COMMIT_MSG>/<YOUR_TOKEN>` 替换成你自己的就可以了
+#          git -c user.name='b' -c user.email='e' commit -m 'up'
+#          # 这里需要一个 共开仓库 的 secrets 配置，这里的 secrets 是一个环境变量，可以直接拿过来直接用
+#          git remote add origin https://${{secrets.TOKEN_FOR_IO}}@github.com/bourneo/bourneo.github.io.git
+#          git push origin main -f -q
