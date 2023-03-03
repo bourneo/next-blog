@@ -27,15 +27,9 @@ module.exports = {
     ];
   },
   images: {
-    // unoptimized: true,
+    unoptimized: true,
     // loader: 'default',
     formats: ['image/avif', 'image/webp'],
     // domains: ['doverank.com'],
-  },
-};
-const nextConfig = {
-  webpack: (config) => {
-    config.resolve.fallback = { ...config.resolve.fallback, net: false, os: false };
-    return config;
   },
 };

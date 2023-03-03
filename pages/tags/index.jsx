@@ -31,11 +31,16 @@ export default function TagIndex({ list }) {
   );
 }
 
-export async function getServerSideProps({ query }) {
-  const tag = query.tag;
-  const list = getListByTag(tag);
+export async function getStaticProps() {
+  const list = getListByTag('All');
   return { props: { list } };
 }
+
+// export async function getServerSideProps({ query }) {
+//   const tag = query.tag;
+//   const list = getListByTag(tag);
+//   return { props: { list } };
+// }
 
 // function Post({ post }) {
 //   const router = useRouter();
@@ -51,13 +56,6 @@ export async function getServerSideProps({ query }) {
 //   };
 // }
 //
-// export async function getStaticProps() {
-//   // const tag = context.params.tag;
-//   // const list = getListByTag(tag);
-//   return {
-//     props: {},
-//   };
-// }
 
 // export const getServerSideProps = async (context) => {
 //   const { params } = context;

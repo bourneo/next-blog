@@ -21,7 +21,7 @@ jobs:
           npm install
           npm run build
 
-      - name: Push To Pages
+      - name: Push
         uses: JamesIves/github-pages-deploy-action@3.5.9
         with:
           ACCESS_TOKEN: ${{ secrets.TOKEN_FOR_IO }}
