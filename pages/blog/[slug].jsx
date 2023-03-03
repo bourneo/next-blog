@@ -13,7 +13,7 @@ export default function BlogItem({ blog }) {
         <title>{`${blog.title} - Blog`}</title>
         <meta name="author" content="DoveRank" />
         <meta name="keywords" content={blog.tags} />
-        <meta name="description" content={blog.description} />
+        <meta name="description" content={blog.description || ''} />
       </Head>
       <Banner>
         {/* <h1 className="text-5xl font-medium">{blog.title}</h1> */}
@@ -41,5 +41,5 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const blog = await getBlogBySlug(params.slug);
-  return { props: blog };
+  return { props: { blog } };
 }

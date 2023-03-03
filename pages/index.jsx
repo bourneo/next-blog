@@ -31,7 +31,5 @@ export default function Home({ list }) {
 
 export async function getStaticProps() {
   const list = getAllList();
-  return {
-    props: { list: list },
-  };
+  return { props: { list } };
 }

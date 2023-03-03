@@ -21,7 +21,5 @@ export default function BlogIndex({ list }) {
 
 export async function getStaticProps() {
   const list = getBlogList();
-  return {
-    props: { list: list },
-  };
+  return { props: { list } };
 }

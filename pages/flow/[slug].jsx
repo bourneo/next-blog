@@ -38,5 +38,5 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const flow = await getFlowBySlug(params.slug);
-  return { props: flow };
+  return { props: { flow } };
 }

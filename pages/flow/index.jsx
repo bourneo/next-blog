@@ -21,7 +21,5 @@ export default function FlowIndex({ list }) {
 
 export async function getStaticProps() {
   const list = getFlowList();
-  return {
-    props: { list: list },
-  };
+  return { props: { list } };
 }

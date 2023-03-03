@@ -34,11 +34,7 @@ export default function TagIndex({ list }) {
 export async function getServerSideProps({ query }) {
   const tag = query.tag;
   const list = getListByTag(tag);
-  return {
-    props: {
-      list: list,
-    },
-  };
+  return { props: { list } };
 }
 
 // function Post({ post }) {
