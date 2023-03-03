@@ -28,7 +28,7 @@ jobs:
           npm run export
 
       - name: Push
-        uses: JamesIves/github-pages-deploy-action@4.4.0
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           ACCESS_TOKEN: ${{ secrets.TOKEN_FOR_IO }}
           BRANCH: master
