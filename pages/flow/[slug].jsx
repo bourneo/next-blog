@@ -29,8 +29,8 @@ export async function getStaticPaths() {
   const list = getFlowSlugList();
 
   return {
-    paths: list.map((item) => ({
-      params: { slug: item },
+    paths: list.map((flow) => ({
+      params: { slug: flow },
     })),
     fallback: false,
   };

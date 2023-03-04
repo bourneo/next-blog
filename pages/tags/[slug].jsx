@@ -4,7 +4,7 @@ import { getListByTag } from '../../lib/api';
 import ContentItem from '../../component/ContentItem';
 import TagBadge from '../../component/TagBadge';
 
-export default function TagIndex({ list }) {
+export default function TagItem({ list }) {
   return (
     <div>
       <PageHead title={`Tags`} />
@@ -28,7 +28,21 @@ export default function TagIndex({ list }) {
   );
 }
 
-export async function getStaticProps() {
+export async function getStaticPaths() {
   const list = getListByTag('All');
+  const tagSet = list[0];
+  tagSet.push('All');
+
+  return {
+    paths: tagSet.map((tag) => ({
+      params: { slug: tag },
+    })),
+    // fallback: false,
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const list = getListByTag(params.slug);
   return { props: { list } };
 }
