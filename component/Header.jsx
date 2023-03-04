@@ -54,9 +54,9 @@ export default function Header() {
               className="flex items-center hover:opacity-60 after:content-['|'] after:mx-3 after:text-gray-300 after:text-sm last:after:hidden"
               href={item.href}
             >
-              <Image
+              <img
                 className="rounded-lg mr-2"
-                src={`/icon/${item.title}.svg`}
+                src={`/icon/${item.title.toLowerCase()}.svg`}
                 alt={item.title}
                 width={20}
                 height={20}

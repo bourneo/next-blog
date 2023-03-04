@@ -56,12 +56,3 @@ export async function getStaticProps() {
 //   };
 // }
 //
-
-// export const getServerSideProps = async (context) => {
-//   const { params } = context;
-//   const tag = params.tag;
-//   const list = getListByTag(tag);
-//   return {
-//     props: { list: list },
-//   };
-// };
