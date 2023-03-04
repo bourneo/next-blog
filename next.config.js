@@ -9,27 +9,27 @@ const needRedirectPostList = [
 
 /** @type {import('next').NextConfig} */
 module.exports = {
-  async redirects() {
-    return [
-      // ...
-      // spread operator
-      // variable parameters
-      ...needRedirectPostList.map((slug) => ({
-        source: `/${slug}`,
-        destination: `/post/${slug}`,
-        permanent: true,
-      })),
-      {
-        source: '/post/:path*',
-        destination: '/blog/:path*',
-        permanent: true,
-      },
-    ];
-  },
   images: {
     unoptimized: true,
-    // loader: 'default',
     formats: ['image/avif', 'image/webp'],
+    // loader: 'default',
     // domains: ['doverank.com'],
   },
+  // async redirects() {
+  //   return [
+  //     // ...
+  //     // spread operator
+  //     // variable parameters
+  //     ...needRedirectPostList.map((slug) => ({
+  //       source: `/${slug}`,
+  //       destination: `/post/${slug}`,
+  //       permanent: true,
+  //     })),
+  //     {
+  //       source: '/post/:path*',
+  //       destination: '/blog/:path*',
+  //       permanent: true,
+  //     },
+  //   ];
+  // },
 };
