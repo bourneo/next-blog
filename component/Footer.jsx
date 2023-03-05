@@ -1,3 +1,5 @@
+import { version } from '../lib/constant';
+
 export default function Footer() {
   return (
     <footer className="border-t bg-slate-600 text-gray-200 text-sm">
@@ -15,7 +17,7 @@ export default function Footer() {
             <div>By continuing to visit this site you agree to our use of cookies.</div>
           </div>
           <div className="justify-center flex text-slate-600 text-xs">
-            <div>v001</div>
+            <div>{version}</div>
           </div>
         </div>
       </div>
