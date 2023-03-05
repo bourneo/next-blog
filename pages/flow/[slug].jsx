@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
-import Banner from '../../component/Banner';
 import { getFlowBySlug, getFlowSlugList } from '../../lib/api';
 
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
@@ -24,7 +23,7 @@ export async function getStaticProps({ params }) {
 
 export default function FlowItem({ flow }) {
   return (
-    <div className="mt-6 ">
+    <div className="mt-8 ">
       <Head>
         <title>{`${flow.title} - Flow`}</title>
         <meta name="author" content="DoveRank" />
@@ -32,12 +31,13 @@ export default function FlowItem({ flow }) {
         <meta name="description" content={flow.description || ''} />
       </Head>
 
-      <Banner>
-        {/* <h1 className="text-3xl font-medium ">{flow.title}</h1> */}
-        <span className="mt-2 text-medium">update: {flow.date}</span>
-      </Banner>
+      <div className="flex space-x-4">
+        <span className="text-medium">update: {flow.date}</span>
+        <span className="text-medium">|</span>
+        <span className="text-medium">author: {flow.author}</span>
+      </div>
 
-      <article className="px-4 py-8 prose max-w-none">
+      <article className="py-8 prose max-w-none">
         <MDXRemote {...flow.content} components={{ img: (props) => <Image {...props} /> }} />
       </article>
     </div>

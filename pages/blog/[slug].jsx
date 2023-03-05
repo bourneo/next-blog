@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
-import Banner from '../../component/Banner';
 import { getBlogBySlug, getBlogSlugList } from '../../lib/api';
 
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
@@ -32,10 +31,11 @@ export default function BlogItem({ blog }) {
         <meta name="description" content={blog.description || ''} />
       </Head>
 
-      <Banner>
-        {/* <h1 className="text-5xl font-medium">{blog.title}</h1> */}
-        <span className="mt-2 text-medium">update: {blog.date}</span>
-      </Banner>
+      <div className="flex space-x-4">
+        <span className="text-medium">update: {blog.date}</span>
+        <span className="text-medium">|</span>
+        <span className="text-medium">author: {blog.author}</span>
+      </div>
 
       <article className="px-4 py-8 prose max-w-none ">
         {/* md to html */}

@@ -11,6 +11,8 @@ tags:
 
 description:
 
+author: dove
+
 ---
 
 # How to disable the Count Badge of Source Control in VS Code

@@ -11,6 +11,8 @@ tags:
 
 description: FFmpeg
 
+author: dove
+
 ---
 
 # FFmpeg Examples
