@@ -4,6 +4,25 @@ import { getListByTag } from '../../lib/api';
 import ContentItem from '../../component/ContentItem';
 import TagBadge from '../../component/TagBadge';
 
+export async function getStaticPaths() {
+  const list = getListByTag('All');
+  const tagSet = list[0];
+  tagSet.push('All');
+
+  return {
+    paths: tagSet.map((tag) => ({
+      params: { slug: tag },
+    })),
+    // fallback: false,
+    fallback: 'blocking',
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const list = getListByTag(params.slug);
+  return { props: { list } };
+}
+
 export default function TagItem({ list }) {
   return (
     <div>
@@ -26,23 +45,4 @@ export default function TagItem({ list }) {
       </div>
     </div>
   );
-}
-
-export async function getStaticPaths() {
-  const list = getListByTag('All');
-  const tagSet = list[0];
-  tagSet.push('All');
-
-  return {
-    paths: tagSet.map((tag) => ({
-      params: { slug: tag },
-    })),
-    // fallback: false,
-    fallback: 'blocking',
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const list = getListByTag(params.slug);
-  return { props: { list } };
 }

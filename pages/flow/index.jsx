@@ -3,6 +3,11 @@ import Banner from '../../component/Banner';
 import { getFlowList } from '../../lib/api';
 import ContentItem from '../../component/ContentItem';
 
+export async function getStaticProps() {
+  const list = getFlowList();
+  return { props: { list } };
+}
+
 export default function FlowIndex({ list }) {
   return (
     <div>
@@ -17,9 +22,4 @@ export default function FlowIndex({ list }) {
       </div>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const list = getFlowList();
-  return { props: { list } };
 }

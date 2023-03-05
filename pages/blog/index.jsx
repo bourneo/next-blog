@@ -3,6 +3,11 @@ import Banner from '../../component/Banner';
 import { getBlogList } from '../../lib/api';
 import ContentItem from '../../component/ContentItem';
 
+export async function getStaticProps() {
+  const list = getBlogList();
+  return { props: { list } };
+}
+
 export default function BlogIndex({ list }) {
   return (
     <div>
@@ -17,9 +22,4 @@ export default function BlogIndex({ list }) {
       </div>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const list = getBlogList();
-  return { props: { list } };
 }

@@ -6,6 +6,22 @@ import { getFlowBySlug, getFlowSlugList } from '../../lib/api';
 
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
+export async function getStaticPaths() {
+  const list = getFlowSlugList();
+
+  return {
+    paths: list.map((flow) => ({
+      params: { slug: flow },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const flow = await getFlowBySlug(params.slug);
+  return { props: { flow } };
+}
+
 export default function FlowItem({ flow }) {
   return (
     <div className="mt-6 max-w-3xl mx-auto">
@@ -23,20 +39,4 @@ export default function FlowItem({ flow }) {
       </article>
     </div>
   );
-}
-
-export async function getStaticPaths() {
-  const list = getFlowSlugList();
-
-  return {
-    paths: list.map((flow) => ({
-      params: { slug: flow },
-    })),
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const flow = await getFlowBySlug(params.slug);
-  return { props: { flow } };
 }

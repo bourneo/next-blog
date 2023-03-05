@@ -4,6 +4,11 @@ import { getListByTag } from '../../lib/api';
 import ContentItem from '../../component/ContentItem';
 import TagBadge from '../../component/TagBadge';
 
+export async function getStaticProps() {
+  const list = getListByTag('All');
+  return { props: { list } };
+}
+
 export default function TagIndex({ list }) {
   return (
     <div>
@@ -26,9 +31,4 @@ export default function TagIndex({ list }) {
       </div>
     </div>
   );
-}
-
-export async function getStaticProps() {
-  const list = getListByTag('All');
-  return { props: { list } };
 }

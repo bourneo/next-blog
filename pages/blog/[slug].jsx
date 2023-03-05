@@ -6,6 +6,22 @@ import { getBlogBySlug, getBlogSlugList } from '../../lib/api';
 
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
+export async function getStaticPaths() {
+  const blogs = getBlogSlugList();
+
+  return {
+    paths: blogs.map((blog) => ({
+      params: { slug: blog },
+    })),
+    fallback: false,
+  };
+}
+
+export async function getStaticProps({ params }) {
+  const blog = await getBlogBySlug(params.slug);
+  return { props: { blog } };
+}
+
 export default function BlogItem({ blog }) {
   return (
     <div className="mt-6 max-w-3xl mx-auto ">
@@ -26,20 +42,4 @@ export default function BlogItem({ blog }) {
       </article>
     </div>
   );
-}
-
-export async function getStaticPaths() {
-  const blogs = getBlogSlugList();
-
-  return {
-    paths: blogs.map((blog) => ({
-      params: { slug: blog },
-    })),
-    fallback: false,
-  };
-}
-
-export async function getStaticProps({ params }) {
-  const blog = await getBlogBySlug(params.slug);
-  return { props: { blog } };
 }
