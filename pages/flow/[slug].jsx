@@ -24,16 +24,19 @@ export async function getStaticProps({ params }) {
 
 export default function FlowItem({ flow }) {
   return (
-    <div className="mt-6 max-w-3xl mx-auto">
+    <div className="mt-6 ">
       <Head>
         <title>{`${flow.title} - Flow`}</title>
         <meta name="author" content="DoveRank" />
+        <meta name="keywords" content={flow.tags} />
         <meta name="description" content={flow.description || ''} />
       </Head>
+
       <Banner>
         {/* <h1 className="text-3xl font-medium ">{flow.title}</h1> */}
-        <span className="mt-2 text-sm">update: {flow.date}</span>
+        <span className="mt-2 text-medium">update: {flow.date}</span>
       </Banner>
+
       <article className="px-4 py-8 prose max-w-none">
         <MDXRemote {...flow.content} components={{ img: (props) => <Image {...props} /> }} />
       </article>

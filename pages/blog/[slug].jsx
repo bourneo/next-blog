@@ -31,10 +31,12 @@ export default function BlogItem({ blog }) {
         <meta name="keywords" content={blog.tags} />
         <meta name="description" content={blog.description || ''} />
       </Head>
+
       <Banner>
         {/* <h1 className="text-5xl font-medium">{blog.title}</h1> */}
-        <span className="mt-2 text-sm">update: {blog.date}</span>
+        <span className="mt-2 text-medium">update: {blog.date}</span>
       </Banner>
+
       <article className="px-4 py-8 prose max-w-none ">
         {/* md to html */}
         {/* {...blog.content} = await remark().use(html).process(markdown) */}

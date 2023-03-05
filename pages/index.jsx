@@ -21,7 +21,7 @@ export default function Home({ list }) {
   return (
     <div>
       <PageHead title="DoveRank: Rank Everything" />
-      <Cover></Cover>
+      <Cover />
       <div>
         {list?.map((content) => (
           <ContentItem key={content.slug} content={content} showBadge />

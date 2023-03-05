@@ -16,6 +16,7 @@ export default function TagIndex({ list }) {
       <Banner>
         <h1 className="text-2xl font-medium">Tags</h1>
       </Banner>
+
       {/*tag*/}
       <p className="flex items-center justify-center pt-12 ">
         <TagBadge key="All" tag="All" />
@@ -23,10 +24,11 @@ export default function TagIndex({ list }) {
           <TagBadge key={tag} tag={tag} />
         ))}
       </p>
+
       {/*list*/}
       <div className="pt-12 ">
         {list[1]?.map((content) => (
-          <ContentItem key={content.slug} content={content} />
+          <ContentItem key={content.slug} content={content} showBadge />
         ))}
       </div>
     </div>

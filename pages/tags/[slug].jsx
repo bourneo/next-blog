@@ -8,7 +8,6 @@ export async function getStaticPaths() {
   const list = getListByTag('All');
   const tagSet = list[0];
   tagSet.push('All');
-
   return {
     paths: tagSet.map((tag) => ({
       params: { slug: tag },
@@ -30,6 +29,7 @@ export default function TagItem({ list }) {
       <Banner>
         <h1 className="text-2xl font-medium">Tags</h1>
       </Banner>
+
       {/*tag*/}
       <p className="flex items-center justify-center pt-12 ">
         <TagBadge key="All" tag="All" />
@@ -37,10 +37,11 @@ export default function TagItem({ list }) {
           <TagBadge key={tag} tag={tag} />
         ))}
       </p>
+
       {/*list*/}
       <div className="pt-12 ">
         {list[1]?.map((content) => (
-          <ContentItem key={content.slug} content={content} />
+          <ContentItem key={content.slug} content={content} showBadge />
         ))}
       </div>
     </div>

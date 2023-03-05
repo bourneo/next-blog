@@ -12,9 +12,11 @@ export default function FlowIndex({ list }) {
   return (
     <div>
       <PageHead title={`DoveRank Flow`} />
+
       <Banner>
         <h1 className="text-2xl font-medium">Flow</h1>
       </Banner>
+
       <div className="pt-6">
         {list?.map((content) => (
           <ContentItem key={content.slug} content={content} />
