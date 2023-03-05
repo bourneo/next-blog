@@ -7,6 +7,7 @@ import 'highlight.js/styles/github.css';
 import highlight from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
 import { useEffect } from 'react';
+import Cover from '../component/Cover';
 
 export default function Home({ list }) {
   useEffect(() => {
@@ -16,10 +17,9 @@ export default function Home({ list }) {
   return (
     <div>
       <PageHead title="DoveRank: Rank Everything" />
-      <Banner>
-        <h1 className="text-2xl font-medium">Home</h1>
-        {/*<h1>Rank Everything</h1>*/}
-      </Banner>
+      <Cover>
+        <h1 className="text-2xl font-medium">Columba</h1>
+      </Cover>
       <div className="max-w-3xl mx-auto pt-12 ">
         {list?.map((content) => (
           <ContentItem key={content.slug} content={content} showBadge />
