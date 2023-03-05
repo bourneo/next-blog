@@ -5,7 +5,7 @@ import TagBadge from './TagBadge';
 export default function ContentItem({ content, showBadge }) {
   return (
     // item on the list
-    <article className="py-4 border-b">
+    <article className="py-6 border-t">
       {/*date*/}
       <p className="mb-2 flex items-center space-x-2">
         {showBadge && <TypeBadge type={content.type} />}

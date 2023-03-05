@@ -31,14 +31,14 @@ export default function TagItem({ list }) {
         <h1 className="text-2xl font-medium">Tags</h1>
       </Banner>
       {/*tag*/}
-      <p className="flex items-center justify-center max-w-3xl mx-auto py-12 border-b ">
+      <p className="flex items-center justify-center pt-12 ">
         <TagBadge key="All" tag="All" />
         {list[0].map((tag) => (
           <TagBadge key={tag} tag={tag} />
         ))}
       </p>
       {/*list*/}
-      <div className="max-w-3xl mx-auto pt-12 ">
+      <div className="pt-12 ">
         {list[1]?.map((content) => (
           <ContentItem key={content.slug} content={content} />
         ))}
