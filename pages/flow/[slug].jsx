@@ -32,9 +32,11 @@ export default function FlowItem({ flow }) {
       </Head>
 
       <div className="flex space-x-4">
-        <span className="text-medium">update: {flow.date}</span>
+        <span className="text-medium">Update: {flow.date}</span>
         <span className="text-medium">|</span>
-        <span className="text-medium">author: {flow.author}</span>
+        <span className="text-medium">Author: {flow.author}</span>
+        <span className="text-medium">|</span>
+        <span className="text-medium">ETA: {flow.eta}</span>
       </div>
 
       <article className="py-8 prose max-w-none">

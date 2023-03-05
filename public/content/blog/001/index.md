@@ -11,7 +11,11 @@ tags:
 
 description: FFmpeg
 
+cover:
+
 author: dove
+
+eta: 0 min
 
 ---
 

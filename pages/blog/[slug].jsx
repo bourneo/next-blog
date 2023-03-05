@@ -32,9 +32,12 @@ export default function BlogItem({ blog }) {
       </Head>
 
       <div className="flex space-x-4">
-        <span className="text-medium">update: {blog.date}</span>
+        <span className="text-medium">Update: {blog.date}</span>
         <span className="text-medium">|</span>
-        <span className="text-medium">author: {blog.author}</span>
+        <span className="text-medium">Author: {blog.author}</span>
+        <span className="text-medium">|</span>
+        <span className="text-medium">ETA: {blog.eta}</span>
+        <span className="text-medium">|</span>
       </div>
 
       <article className="px-4 py-8 prose max-w-none ">
