@@ -24,7 +24,7 @@ export async function getStaticProps({ params }) {
 
 export default function TagItem({ list }) {
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto ">
       <PageHead title={`Tags`} />
       <Banner>
         <h1 className="text-2xl font-medium">Tags</h1>

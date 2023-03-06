@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { getFlowBySlug, getFlowSlugList } from '../../lib/api';
 import CoverContent from '../../component/CoverContent';
-import 'prism-themes/themes/prism-vsc-dark-plus.css';
+// import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
 export async function getStaticPaths() {
   const list = getFlowSlugList();
@@ -23,7 +23,7 @@ export async function getStaticProps({ params }) {
 
 export default function FlowItem({ flow }) {
   return (
-    <div className="max-w-3xl mx-auto ">
+    <div className="max-w-3xl mx-auto prose dark:prose-invert ">
       <div className="">
         {flow.cover_path && <CoverContent path={flow.cover_path} alt={flow.title} />}
       </div>
@@ -45,7 +45,7 @@ export default function FlowItem({ flow }) {
         <span className="text-medium">ETA: {flow.eta}</span>
       </div>
 
-      <article className="max-w-3xl mx-auto py-8 prose">
+      <article className="max-w-3xl mx-auto py-8 ">
         <MDXRemote {...flow.content} components={{ img: (props) => <Image {...props} /> }} />
       </article>
     </div>

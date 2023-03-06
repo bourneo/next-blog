@@ -29,7 +29,7 @@ export default function BlogItem({ blog }) {
       {/*  <TableOfContents></TableOfContents>*/}
       {/*</div>*/}
 
-      <div className="max-w-3xl mx-auto ">
+      <div className="max-w-3xl mx-auto prose dark:prose-invert ">
         <div className="">
           {blog.cover_path && <CoverContent path={blog.cover_path} alt={blog.title} />}
         </div>

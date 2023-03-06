@@ -1,5 +1,5 @@
 import 'tailwindcss/tailwind.css';
-import './index.css'; // tailwind base
+import '../lib/index.css'; // tailwind base
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 
