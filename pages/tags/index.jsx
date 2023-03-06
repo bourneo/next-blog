@@ -11,7 +11,7 @@ export async function getStaticProps() {
 
 export default function TagIndex({ list }) {
   return (
-    <div>
+    <div className="max-w-3xl mx-auto">
       <PageHead title={`Tags`} />
       <Banner>
         <h1 className="text-2xl font-medium">Tags</h1>

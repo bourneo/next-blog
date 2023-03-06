@@ -5,12 +5,12 @@ import Banner from '../component/Banner';
 
 export default function About() {
   return (
-    <div>
+    <div className="max-w-3xl mx-auto">
       <PageHead title="About DoveRank" />
       <Banner>
         <h1 className="text-2xl font-medium">About</h1>
       </Banner>
-      <div className="prose text-center max-w-3xl mx-auto py-8">
+      <div className="py-8">
         <div className="flex justify-center mb-8">
           <Image
             className="rounded-2xl"

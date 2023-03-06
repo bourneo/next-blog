@@ -22,7 +22,7 @@ export default function Home({ list }) {
     <div>
       <PageHead title="DoveRank: Rank Everything" />
       <Cover />
-      <div>
+      <div className="max-w-3xl mx-auto">
         {list?.map((content) => (
           <ContentItem key={content.slug} content={content} showBadge />
         ))}
