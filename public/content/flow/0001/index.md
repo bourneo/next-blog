@@ -11,7 +11,7 @@ tags:
 
 description:
 
-cover:
+cover_path: "/content/flow/0001/2023-03-03.jpg"
 
 author: dove
 

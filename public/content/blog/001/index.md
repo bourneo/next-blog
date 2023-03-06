@@ -11,7 +11,7 @@ tags:
 
 description: FFmpeg
 
-cover:
+cover_path: "/content/flow/0001/2023-03-03.jpg"
 
 author: dove
 
@@ -26,4 +26,5 @@ eta: 0 min
 ## FFmpeg
 
 
+![img_test](/content/flow/0001/2023-03-03.jpg)
 

@@ -2,9 +2,8 @@ import Head from 'next/head';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { getBlogBySlug, getBlogSlugList } from '../../lib/api';
-
+import CoverContent from '../../component/CoverContent';
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
-import TableOfContents from '../../component/TableOfContents';
 
 export async function getStaticPaths() {
   const blogs = getBlogSlugList();
@@ -30,7 +29,11 @@ export default function BlogItem({ blog }) {
       {/*  <TableOfContents></TableOfContents>*/}
       {/*</div>*/}
 
-      <div className="mt-6 max-w-3xl mx-auto">
+      <div className="max-w-3xl mx-auto ">
+        <div className="">
+          {blog.cover_path && <CoverContent path={blog.cover_path} alt={blog.title} />}
+        </div>
+
         <Head>
           <title>{`${blog.title} - Blog`}</title>
           <meta name="author" content="DoveRank" />
@@ -38,7 +41,7 @@ export default function BlogItem({ blog }) {
           <meta name="description" content={blog.description || ''} />
         </Head>
 
-        <div className="flex space-x-4">
+        <div className="flex space-x-4 ">
           <span className="text-medium">Update: {blog.date}</span>
           <span className="text-medium">|</span>
           <span className="text-medium">Author: {blog.author}</span>
@@ -48,8 +51,6 @@ export default function BlogItem({ blog }) {
         </div>
 
         <article className="px-4 py-8 prose max-w-none ">
-          {/* md to html */}
-          {/* {...blog.content} = await remark().use(html).process(markdown) */}
           <MDXRemote {...blog.content} components={{ img: (props) => <Image {...props} /> }} />
         </article>
       </div>
