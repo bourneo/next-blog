@@ -11,7 +11,7 @@ export default function ContentItem({ content, showBadge }) {
       {/*date*/}
       <p className="mb-2 flex items-center space-x-2">
         {showBadge && <TypeBadge type={content.type} />}
-        <span className="text-sm text-gray-400">{content.date}</span>
+        <span className="text-sm text-gray-300">{content.date}</span>
       </p>
 
       {/*title*/}

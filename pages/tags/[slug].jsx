@@ -27,7 +27,7 @@ export default function TagItem({ list }) {
     <div className="max-w-3xl mx-auto ">
       <Head4Page title={'Tags - DoveRank'} />
       <Banner>
-        <h1 className="text-2xl font-medium text-gray-100 ">Tags</h1>
+        <h1 className="text-2xl font-medium text-gray-200 ">Tags</h1>
       </Banner>
 
       {/*tag*/}

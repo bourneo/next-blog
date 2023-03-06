@@ -93,7 +93,7 @@ export default function Header() {
                 enterTo="opacity-100 translate-x-0"
               >
                 <Link
-                  className="block py-4 px-2 text-sm font-semibold text-gray-700"
+                  className="block py-4 px-2 text-sm font-semibold text-gray-600"
                   href={item.href}
                   onClick={handleLinkClick}
                 >

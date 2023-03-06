@@ -14,7 +14,7 @@ export default function FlowIndex({ list }) {
       <Head4Page title={'Flow - DoveRank'} />
 
       <Banner>
-        <h1 className="text-2xl font-medium text-gray-100">Flow</h1>
+        <h1 className="text-2xl font-medium text-gray-200">Flow</h1>
       </Banner>
 
       <div className="pt-6">
