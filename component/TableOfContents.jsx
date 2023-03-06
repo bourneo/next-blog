@@ -1,4 +1,3 @@
-// todo
 export const component = {
   // ...headings,
   // p: Paragraph,
