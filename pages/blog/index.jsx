@@ -11,10 +11,12 @@ export async function getStaticProps() {
 export default function BlogIndex({ list }) {
   return (
     <div className="max-w-3xl mx-auto">
-      <PageHead title={`DoveRank Blog`} />
+      <PageHead title="DoveRank Blog" />
+
       <Banner>
-        <h1 className="text-2xl font-medium">Blog</h1>
+        <h1 className="text-2xl font-medium text-gray-100 ">Blog</h1>
       </Banner>
+
       <div className="pt-6">
         {list?.map((content) => (
           <ContentItem key={content.slug} content={content} />

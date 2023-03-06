@@ -8,7 +8,7 @@ export default function About() {
     <div className="max-w-3xl mx-auto">
       <PageHead title="About DoveRank" />
       <Banner>
-        <h1 className="text-2xl font-medium">About</h1>
+        <h1 className="text-2xl font-medium text-gray-100 ">About</h1>
       </Banner>
       <div className="py-8">
         <div className="flex justify-center mb-8">
@@ -22,10 +22,10 @@ export default function About() {
         </div>
         <div className="flex justify-center space-x-4 smt-6">
           <a className="w-5 h-5" title="Email" href="">
-            <AtSign size="100%" />
+            <AtSign size="100%" stroke="gray" />
           </a>
           <a className="w-5 h-5" title="GitHub" href="">
-            <GitHub size="100%" />
+            <GitHub size="100%" stroke="gray" />
           </a>
         </div>
       </div>

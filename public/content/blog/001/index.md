@@ -25,6 +25,20 @@ eta: 0 min
 
 ## FFmpeg
 
-
 ![img_test](/content/flow/0001/2023-03-03.jpg)
 
+```javascript
+function groupBy(list, keyGetter) {
+  const map = new Map();
+  list.forEach((item) => {
+    const key = keyGetter(item);
+    const collection = map.get(key);
+    if (!collection) {
+      map.set(key, [item]);
+    } else {
+      collection.push(item);
+    }
+  });
+  return map;
+}
+```

@@ -3,7 +3,8 @@ import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { getBlogBySlug, getBlogSlugList } from '../../lib/api';
 import CoverContent from '../../component/CoverContent';
-import 'prism-themes/themes/prism-vsc-dark-plus.css';
+
+// import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
 export async function getStaticPaths() {
   const blogs = getBlogSlugList();
@@ -50,7 +51,7 @@ export default function BlogItem({ blog }) {
           <span className="text-medium">|</span>
         </div>
 
-        <article className="px-4 py-8 prose max-w-none ">
+        <article className="py-8 ">
           <MDXRemote {...blog.content} components={{ img: (props) => <Image {...props} /> }} />
         </article>
       </div>

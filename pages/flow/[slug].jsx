@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { getFlowBySlug, getFlowSlugList } from '../../lib/api';
 import CoverContent from '../../component/CoverContent';
+
 // import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
 export async function getStaticPaths() {
@@ -28,14 +29,12 @@ export default function FlowItem({ flow }) {
         {flow.cover_path && <CoverContent path={flow.cover_path} alt={flow.title} />}
       </div>
 
-      <div>
-        <Head>
-          <title>{`${flow.title} - Flow`}</title>
-          <meta name="author" content="DoveRank" />
-          <meta name="keywords" content={flow.tags} />
-          <meta name="description" content={flow.description || ''} />
-        </Head>
-      </div>
+      <Head>
+        <title>{`${flow.title} - Flow`}</title>
+        <meta name="author" content="DoveRank" />
+        <meta name="keywords" content={flow.tags} />
+        <meta name="description" content={flow.description || ''} />
+      </Head>
 
       <div className="flex space-x-4 ">
         <span className="text-medium">Update: {flow.date}</span>
@@ -45,7 +44,7 @@ export default function FlowItem({ flow }) {
         <span className="text-medium">ETA: {flow.eta}</span>
       </div>
 
-      <article className="max-w-3xl mx-auto py-8 ">
+      <article className="py-8 ">
         <MDXRemote {...flow.content} components={{ img: (props) => <Image {...props} /> }} />
       </article>
     </div>

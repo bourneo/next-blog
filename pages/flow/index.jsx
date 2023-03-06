@@ -11,10 +11,10 @@ export async function getStaticProps() {
 export default function FlowIndex({ list }) {
   return (
     <div className="max-w-3xl mx-auto">
-      <PageHead title={`DoveRank Flow`} />
+      <PageHead title="DoveRank Flow" />
 
       <Banner>
-        <h1 className="text-2xl font-medium">Flow</h1>
+        <h1 className="text-2xl font-medium text-gray-100">Flow</h1>
       </Banner>
 
       <div className="pt-6">

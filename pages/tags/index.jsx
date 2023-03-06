@@ -11,14 +11,15 @@ export async function getStaticProps() {
 
 export default function TagIndex({ list }) {
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-3xl mx-auto ">
       <PageHead title={`Tags`} />
+
       <Banner>
-        <h1 className="text-2xl font-medium">Tags</h1>
+        <h1 className="text-2xl font-medium text-gray-100 ">Tags</h1>
       </Banner>
 
       {/*tag*/}
-      <p className="flex items-center justify-center pt-12 ">
+      <p className="flex justify-center pt-12 ">
         <TagBadge key="All" tag="All" />
         {list[0].map((tag) => (
           <TagBadge key={tag} tag={tag} />
