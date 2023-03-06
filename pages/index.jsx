@@ -1,4 +1,4 @@
-import PageHead from '../component/PageHead';
+import Head4Page from '../component/Head4Page';
 import { getAllList } from '../lib/api';
 import ContentItem from '../component/ContentItem';
 import CoverHome from '../component/CoverHome';
@@ -19,7 +19,7 @@ export default function Home({ list }) {
   });
   return (
     <div>
-      <PageHead title="DoveRank: Rank Everything" />
+      <Head4Page title={'DoveRank: Rank Everything'} />
       <CoverHome />
       <div className="max-w-3xl mx-auto">
         {list?.map((content) => (

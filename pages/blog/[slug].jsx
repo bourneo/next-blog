@@ -1,8 +1,8 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { getBlogBySlug, getBlogSlugList } from '../../lib/api';
 import CoverContent from '../../component/CoverContent';
+import Head4Content from '../../component/Head4Content';
 
 // import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
@@ -35,12 +35,7 @@ export default function BlogItem({ blog }) {
           {blog.cover_path && <CoverContent path={blog.cover_path} alt={blog.title} />}
         </div>
 
-        <Head>
-          <title>{`${blog.title} - Blog`}</title>
-          <meta name="author" content="DoveRank" />
-          <meta name="keywords" content={blog.tags} />
-          <meta name="description" content={blog.description || ''} />
-        </Head>
+        <Head4Content item={blog} />
 
         <div className="flex space-x-4 ">
           <span className="text-medium">Update: {blog.date}</span>

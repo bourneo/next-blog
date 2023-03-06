@@ -20,7 +20,7 @@ export default function Footer() {
             <div className="flex justify-center">
               <div>By continuing to visit this site you agree to our use of cookies.</div>
             </div>
-            <div className="justify-center flex text-xs">
+            <div className="flex justify-center text-xs">
               <div className={`${version_color}`}>{version}</div>
             </div>
           </div>

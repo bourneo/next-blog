@@ -1,4 +1,4 @@
-import PageHead from '../../component/PageHead';
+import Head4Page from '../../component/Head4Page';
 import Banner from '../../component/Banner';
 import { getListByTag } from '../../lib/api';
 import ContentItem from '../../component/ContentItem';
@@ -12,7 +12,7 @@ export async function getStaticProps() {
 export default function TagIndex({ list }) {
   return (
     <div className="max-w-3xl mx-auto ">
-      <PageHead title={`Tags`} />
+      <Head4Page title={'Tags - DoveRank'} />
 
       <Banner>
         <h1 className="text-2xl font-medium text-gray-100 ">Tags</h1>

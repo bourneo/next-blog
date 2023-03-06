@@ -1,4 +1,4 @@
-import PageHead from '../../component/PageHead';
+import Head4Page from '../../component/Head4Page';
 import Banner from '../../component/Banner';
 import { getBlogList } from '../../lib/api';
 import ContentItem from '../../component/ContentItem';
@@ -11,7 +11,7 @@ export async function getStaticProps() {
 export default function BlogIndex({ list }) {
   return (
     <div className="max-w-3xl mx-auto">
-      <PageHead title="DoveRank Blog" />
+      <Head4Page title={'Blog - DoveRank'} />
 
       <Banner>
         <h1 className="text-2xl font-medium text-gray-100 ">Blog</h1>

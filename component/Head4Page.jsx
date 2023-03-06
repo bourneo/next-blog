@@ -1,6 +1,6 @@
 import Head from 'next/head';
 
-export default function PageHead({ title }) {
+export default function Head4Page({ title }) {
   return (
     <Head>
       <title>{title}</title>

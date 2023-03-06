@@ -1,8 +1,8 @@
-import Head from 'next/head';
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { getFlowBySlug, getFlowSlugList } from '../../lib/api';
 import CoverContent from '../../component/CoverContent';
+import Head4Content from '../../component/Head4Content';
 
 // import 'prism-themes/themes/prism-vsc-dark-plus.css';
 
@@ -29,12 +29,7 @@ export default function FlowItem({ flow }) {
         {flow.cover_path && <CoverContent path={flow.cover_path} alt={flow.title} />}
       </div>
 
-      <Head>
-        <title>{`${flow.title} - Flow`}</title>
-        <meta name="author" content="DoveRank" />
-        <meta name="keywords" content={flow.tags} />
-        <meta name="description" content={flow.description || ''} />
-      </Head>
+      <Head4Content item={flow} />
 
       <div className="flex space-x-4 ">
         <span className="text-medium">Update: {flow.date}</span>
