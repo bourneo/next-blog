@@ -2,10 +2,10 @@ import Head4Page from '../component/Head4Page';
 import { getAllList } from '../lib/api';
 import ContentItem from '../component/ContentItem';
 import CoverHome from '../component/CoverHome';
+import { useEffect } from 'react';
 import 'highlight.js/styles/github.css';
 import highlight from 'highlight.js/lib/core';
 import javascript from 'highlight.js/lib/languages/javascript';
-import { useEffect } from 'react';
 
 export async function getStaticProps() {
   const list = getAllList();

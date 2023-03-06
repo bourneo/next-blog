@@ -29,3 +29,13 @@ Search "Count Badge" in settings, change the value of the item, turn it off.
 
 VS Code provides a number of options to customize you editor, it is a user-friendly tool for
 developers in this aspect.
+
+```javascript
+export const meta = {
+  title: 'FFmpeg 视频音频处理',
+  date: '2021-01-30 15:31:22',
+  author: 'DoveRank',
+  description: 'FFmpeg',
+  tags: 'FFmpeg',
+};
+```
