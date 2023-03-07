@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
-import { getBlogBySlug, getBlogSlugList } from '../../lib/api';
+import { getBlogBySlug, getBlogSlugList } from '../../lib/common';
 import CoverContent from '../../component/CoverContent';
 import Head4Content from '../../component/Head4Content';
 // Syntax highlight

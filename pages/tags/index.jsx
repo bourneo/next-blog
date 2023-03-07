@@ -1,6 +1,6 @@
 import Head4Page from '../../component/Head4Page';
 import Banner from '../../component/Banner';
-import { getListByTag } from '../../lib/api';
+import { getListByTag } from '../../lib/common';
 import ContentItem from '../../component/ContentItem';
 import TagBadge from '../../component/TagBadge';
 

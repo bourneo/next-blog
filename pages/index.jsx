@@ -1,5 +1,5 @@
 import Head4Page from '../component/Head4Page';
-import { getAllList } from '../lib/api';
+import { getAllList } from '../lib/common';
 import ContentItem from '../component/ContentItem';
 import CoverHome from '../component/CoverHome';
 

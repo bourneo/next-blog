@@ -1,11 +1,11 @@
 import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
-import { getFlowBySlug, getFlowSlugList } from '../../lib/api';
+import { getFlowBySlug, getFlowSlugList } from '../../lib/common';
 import CoverContent from '../../component/CoverContent';
 import Head4Content from '../../component/Head4Content';
+import ContentAddition from '../../component/ContentAddition';
 // Syntax highlight
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
-import ContentAddition from '../../component/ContentAddition';
 
 export async function getStaticPaths() {
   const list = getFlowSlugList();

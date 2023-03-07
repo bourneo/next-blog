@@ -69,6 +69,7 @@ module.exports = {
   variants: {
     extend: {
       margin: ['last'],
+      // dark mode
       typography: ['dark'],
     },
   },

@@ -1,6 +1,6 @@
 import Head4Page from '../../component/Head4Page';
 import Banner from '../../component/Banner';
-import { getFlowList } from '../../lib/api';
+import { getFlowList } from '../../lib/common';
 import ContentItem from '../../component/ContentItem';
 
 export async function getStaticProps() {
