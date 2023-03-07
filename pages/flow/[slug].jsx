@@ -5,6 +5,7 @@ import CoverContent from '../../component/CoverContent';
 import Head4Content from '../../component/Head4Content';
 // Syntax highlight
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
+import ContentAddition from '../../component/ContentAddition';
 
 export async function getStaticPaths() {
   const list = getFlowSlugList();
@@ -31,15 +32,9 @@ export default function FlowItem({ flow }) {
 
       <Head4Content item={flow} />
 
-      <div className="flex justify-center space-x-4 ">
-        <span className="text-medium">Update: {flow.date}</span>
-        <span className="text-medium">|</span>
-        <span className="text-medium">Author: {flow.author}</span>
-        <span className="text-medium">|</span>
-        <span className="text-medium">ETA: {flow.eta}</span>
-      </div>
+      <ContentAddition item={flow} />
 
-      <article className="py-8 prose dark:prose-invert ">
+      <article className="py-8 max-w-2xl mx-auto prose dark:prose-invert ">
         <MDXRemote {...flow.content} components={{ img: (props) => <Image {...props} /> }} />
       </article>
     </div>

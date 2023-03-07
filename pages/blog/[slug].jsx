@@ -5,6 +5,7 @@ import CoverContent from '../../component/CoverContent';
 import Head4Content from '../../component/Head4Content';
 // Syntax highlight
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
+import ContentAddition from '../../component/ContentAddition';
 
 export async function getStaticPaths() {
   const blogs = getBlogSlugList();
@@ -37,16 +38,9 @@ export default function BlogItem({ blog }) {
 
         <Head4Content item={blog} />
 
-        <div className="flex justify-center space-x-4 ">
-          <span className="text-medium">Update: {blog.date}</span>
-          <span className="text-medium">|</span>
-          <span className="text-medium">Author: {blog.author}</span>
-          <span className="text-medium">|</span>
-          <span className="text-medium">ETA: {blog.eta}</span>
-          <span className="text-medium">|</span>
-        </div>
+        <ContentAddition item={blog} />
 
-        <article className="py-8 prose dark:prose-invert ">
+        <article className="py-8 max-w-2xl mx-auto prose dark:prose-invert ">
           <MDXRemote {...blog.content} components={{ img: (props) => <Image {...props} /> }} />
         </article>
       </div>
