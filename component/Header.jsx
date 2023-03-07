@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
+import MenuButton from './MenuButton';
 
 const text_color_light = 'text-gray-200';
 
@@ -17,7 +18,7 @@ const menu = [
 const ToggleIcon = ({ icon: Icon, hidden }) => {
   return (
     <Icon
-      className="w-5 h-5 absolute top-0 left-0 transition duration-150 opacity-100 scale-100 data-[hidden=true]:invisible data-[hidden=true]:opacity-0 data-[hidden=true]:scale-0"
+      className="w-6 h-6 absolute top-1 left-0 transition duration-150 opacity-100 scale-100 data-[hidden=true]:invisible data-[hidden=true]:opacity-0 data-[hidden=true]:scale-0"
       data-hidden={hidden}
     />
   );
@@ -57,17 +58,10 @@ export default function Header() {
             {menu.map((item) => (
               <Link
                 key={item.href}
-                className="flex items-center hover:opacity-60 after:content-['|'] after:mx-3 after:text-gray-300 after:text-sm last:after:hidden"
                 href={item.href}
+                className="flex items-center hover:opacity-60 after:content-['|'] after:mx-3 after:text-gray-300 after:text-sm last:after:hidden"
               >
-                <img
-                  className="rounded-lg mr-2"
-                  src={`/icon/${item.title.toLowerCase()}.svg`}
-                  alt={item.title}
-                  width={20}
-                  height={20}
-                />
-                {item.title}
+                <MenuButton title={item.title} />
               </Link>
             ))}
           </nav>
@@ -82,7 +76,7 @@ export default function Header() {
           <Transition
             show={active}
             as="ul"
-            className="flex flex-col p-4 absolute left-0 top-20 w-full h-screen bg-slate-700 "
+            className="flex flex-col p-4 absolute left-0 top-14 w-full  bg-slate-700 "
             enter="transition duration-[50ms]"
             enterFrom="opacity-0"
             enterTo="opacity-100"
@@ -90,23 +84,26 @@ export default function Header() {
             leaveFrom="opacity-100"
             leaveTo="opacity-0"
           >
-            {menu.map((item, index) => (
-              <Transition.Child
-                key={item.href}
-                as="li"
-                enter={`transition duration-300 ${item.delay}`}
-                enterFrom="opacity-0 -translate-x-5"
-                enterTo="opacity-100 translate-x-0"
-              >
-                <Link
-                  className="block py-4 px-2 text-sm font-medium text-gray-300 "
-                  href={item.href}
-                  onClick={handleLinkClick}
+            <div>
+              {menu.map((item, index) => (
+                <Transition.Child
+                  key={item.href}
+                  as="li"
+                  enter={`transition duration-300 ${item.delay}`}
+                  enterFrom="opacity-0 -translate-x-5"
+                  enterTo="opacity-100 translate-x-0"
                 >
-                  {item.title}
-                </Link>
-              </Transition.Child>
-            ))}
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={handleLinkClick}
+                    className="flex block py-4 px-2 text-sm font-medium text-gray-300 "
+                  >
+                    <MenuButton title={item.title} />
+                  </Link>
+                </Transition.Child>
+              ))}
+            </div>
           </Transition>
         </div>
       </div>
