@@ -1,5 +1,5 @@
-// import { text_color_light } from '../lib/constant';
-var text_color_light = 'text-gray-200';
+const text_color_light = 'text-gray-200';
+
 export default function ErrorInfo({ message }) {
   return (
     <div className={`${text_color_light}`}>

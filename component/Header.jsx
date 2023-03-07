@@ -3,9 +3,9 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-// import { background_color_head_food, text_color_light } from '../lib/constant';
-const background_color_head_food = 'bg-slate-600';
+
 const text_color_light = 'text-gray-200';
+
 const menu = [
   { title: 'Home', href: '/', delay: 'delay-[100ms]' },
   { title: 'Blog', href: '/blog', delay: 'delay-[150ms]' },
@@ -37,7 +37,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`${background_color_head_food} ${text_color_light}`}>
+    <header className={`${text_color_light}`}>
       <div className="py-3 border-b ">
         <div className="flex justify-between max-w-5xl mx-auto px-4 ">
           {/*banner left*/}

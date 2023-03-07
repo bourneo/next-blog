@@ -1,9 +1,10 @@
 import Link from 'next/link';
 import TypeBadge from './TypeBadge';
 import TagBadge from './TagBadge';
-// import { text_color_gray, text_color_light } from '../lib/constant';
-var text_color_gray = 'text-gray-300';
-var text_color_light = 'text-gray-200';
+
+const text_color_gray = 'text-gray-300';
+const text_color_light = 'text-gray-200';
+
 export default function ContentItem({ content, showBadge }) {
   return (
     // item on the list
