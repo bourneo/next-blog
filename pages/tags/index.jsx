@@ -13,11 +13,8 @@ export default function TagIndex({ list }) {
   return (
     <div className="max-w-3xl mx-auto ">
       <Head4Page title={'Tags - DoveRank'} />
-      {/*todo*/}
-      <Banner>
-        <h1 className="text-2xl font-medium text-gray-200 ">Tags</h1>
-      </Banner>
 
+      <Banner banner={'Tags'} />
       {/*tag*/}
       <p className="flex justify-center pt-12 ">
         <TagBadge key="All" tag="All" />

@@ -13,9 +13,7 @@ export default function BlogIndex({ list }) {
     <div className="max-w-3xl mx-auto">
       <Head4Page title={'Blog - DoveRank'} />
 
-      <Banner>
-        <h1 className="text-2xl font-medium text-gray-100 ">Blog</h1>
-      </Banner>
+      <Banner banner={'Blog'} />
 
       <div className="pt-6">
         {list?.map((content) => (

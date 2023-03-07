@@ -8,9 +8,7 @@ export default function About() {
     <div className="max-w-3xl mx-auto">
       <Head4Page title={'About - DoveRank'} />
 
-      <Banner>
-        <h1 className="text-2xl font-medium text-gray-100 ">About</h1>
-      </Banner>
+      <Banner banner={'About'} />
 
       <div className="py-8">
         <div className="flex justify-center mb-8">

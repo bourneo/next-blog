@@ -13,9 +13,7 @@ export default function FlowIndex({ list }) {
     <div className="max-w-3xl mx-auto">
       <Head4Page title={'Flow - DoveRank'} />
 
-      <Banner>
-        <h1 className="text-2xl font-medium text-gray-200">Flow</h1>
-      </Banner>
+      <Banner banner={'Flow'} />
 
       <div className="pt-6">
         {list?.map((content) => (
