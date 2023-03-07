@@ -8,7 +8,7 @@ const text_color_light = 'text-gray-200';
 export default function ContentItem({ content, showBadge }) {
   return (
     // item on the list
-    <div className="py-6 border-t space-y-2">
+    <div className="py-4 border-t space-y-3">
       {/*todo cover*/}
 
       {/*type date*/}
@@ -32,7 +32,7 @@ export default function ContentItem({ content, showBadge }) {
       </div>
 
       {/*tag*/}
-      <div className="flex">
+      <div className="flex space-x-4 pb-2">
         {content.tags.map((item) => (
           <TagBadge key={item} tag={item} />
         ))}

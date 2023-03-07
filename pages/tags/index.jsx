@@ -14,9 +14,10 @@ export default function TagIndex({ list }) {
     <div className="max-w-3xl mx-auto ">
       <Head4Page title={'Tags - DoveRank'} />
 
-      <Banner banner={'Tags'} />
+      <Banner banner="Tags" />
+
       {/*tag*/}
-      <p className="flex justify-center item-center pt-12 ">
+      <p className="flex justify-center item-center pt-6 space-x-4">
         <TagBadge key="All" tag="All" />
         {list[0].map((tag) => (
           <TagBadge key={tag} tag={tag} />
@@ -24,7 +25,7 @@ export default function TagIndex({ list }) {
       </p>
 
       {/*list*/}
-      <div className="pt-12 ">
+      <div className="pt-6 ">
         {list[1]?.map((content) => (
           <ContentItem key={content.slug} content={content} showBadge />
         ))}

@@ -1,7 +1,8 @@
+import { version } from '../package.json';
+
 const text_color_deep = 'text-gray-400';
 const text_color_version = 'text-gray-600';
 const text_color_gray = 'text-gray-300';
-const version_number = '0.0.1';
 
 export default function Footer() {
   return (
@@ -26,7 +27,7 @@ export default function Footer() {
         </div>
 
         <div className="flex justify-center item-center">
-          <div className={`${text_color_version}`}>{version_number}</div>
+          <div className={`${text_color_version}`}>{version}</div>
         </div>
       </div>
     </footer>

@@ -30,7 +30,7 @@ export default function TagItem({ list }) {
       <Banner banner="Tags" />
 
       {/*tag*/}
-      <p className="flex justify-center item-center pt-12 ">
+      <p className="flex justify-center item-center pt-6 space-x-4">
         <TagBadge key="All" tag="All" />
         {list[0].map((tag) => (
           <TagBadge key={tag} tag={tag} />
@@ -38,7 +38,7 @@ export default function TagItem({ list }) {
       </p>
 
       {/*list*/}
-      <div className="pt-12 ">
+      <div className="pt-6 ">
         {list[1]?.map((content) => (
           <ContentItem key={content.slug} content={content} showBadge />
         ))}
