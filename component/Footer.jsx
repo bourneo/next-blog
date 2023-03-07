@@ -1,11 +1,9 @@
-import {
-  background_color_head_food,
-  text_color_deep,
-  text_color_gray,
-  text_color_version,
-  version,
-} from '../lib/constant';
-
+// import { text_color_deep, text_color_gray, version } from '../lib/constant';
+var text_color_deep = 'text-gray-400';
+const text_color_version = 'text-gray-600';
+const background_color_head_food = 'bg-slate-600';
+var text_color_gray = 'text-gray-300';
+var version = '300';
 export default function Footer() {
   return (
     <footer className={`${background_color_head_food}`}>

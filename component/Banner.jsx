@@ -1,5 +1,5 @@
-import { text_color_light } from '../lib/constant';
-
+// import { text_color_light } from '../lib/constant';
+var text_color_light = 'text-gray-200';
 export default function Banner({ banner }) {
   return (
     <section className={`${text_color_light}`}>

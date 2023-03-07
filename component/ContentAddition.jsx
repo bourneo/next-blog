@@ -1,6 +1,6 @@
-import { text_color_gray } from '../lib/constant';
+// import { text_color_gray } from '../lib/constant';
 import { Calendar, Clock, Edit } from 'react-feather';
-
+var text_color_gray = 'text-gray-300';
 export default function ContentAddition({ item }) {
   return (
     <div className={`${text_color_gray}`}>
