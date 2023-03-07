@@ -39,15 +39,15 @@ export default function Header() {
 
   return (
     <header className={`${head_foot_color}`}>
-      <div className="py-4 border-b text-gray-200">
-        <div className="max-w-5xl mx-auto px-4 flex items-center justify-between relative">
+      <div className="py-3 border-b text-gray-200">
+        <div className="flex justify-between max-w-5xl mx-auto px-4 ">
           <Link className="flex items-center" href="/">
             <Image
               className="rounded-lg"
-              src="/img/output_96.png"
+              src="/img/output_128.jpg"
               alt="Avatar"
-              width={38}
-              height={38}
+              width={32}
+              height={32}
             />
             <p className="ml-2 font-bold text-xl ">DoveRank</p>
           </Link>
