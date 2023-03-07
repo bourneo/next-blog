@@ -1,38 +1,40 @@
 import Link from 'next/link';
 import TypeBadge from './TypeBadge';
 import TagBadge from './TagBadge';
+import { text_color_gray, text_color_light } from '../lib/constant';
 
 export default function ContentItem({ content, showBadge }) {
   return (
     // item on the list
-    <article className="py-6 border-t">
+    <div className="py-6 border-t space-y-2">
       {/*todo cover*/}
 
-      {/*date*/}
-      <p className="mb-2 flex items-center space-x-2">
-        {showBadge && <TypeBadge type={content.type} />}
-        <span className="text-sm text-gray-300">{content.date}</span>
-      </p>
+      {/*type date*/}
+      <div className={`${text_color_gray}`}>
+        <div className="flex space-x-2 text-sm">
+          {showBadge && <TypeBadge type={content.type} />}
+          <div>{content.date}</div>
+        </div>
+      </div>
 
       {/*title*/}
-      <h2 className="text-xl font-medium text-gray-200 ">
-        <Link
-          className="hover:underline underline-offset-4"
-          href={`/${content.type}/${content.slug}`}
-        >
-          {content.title}
-        </Link>
-      </h2>
+      <div className={`${text_color_light} text-xl font-medium `}>
+        <div className="hover:underline underline-offset-4">
+          <Link href={`/${content.type}/${content.slug}`}>{content.title}</Link>
+        </div>
+      </div>
 
       {/*description*/}
-      <p className="py-2 text-sm text-gray-300">{content.description}</p>
+      <div className={`${text_color_gray} text-sm`}>
+        {content.description && <div>{content.description}</div>}
+      </div>
 
       {/*tag*/}
-      <p className="flex">
+      <div className="flex">
         {content.tags.map((item) => (
           <TagBadge key={item} tag={item} />
         ))}
-      </p>
-    </article>
+      </div>
+    </div>
   );
 }

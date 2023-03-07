@@ -11,7 +11,7 @@ export default function About() {
       <Banner banner={'About'} />
 
       <div className="py-8">
-        <div className="flex justify-center mb-8">
+        <div className="flex justify-center item-center mb-8">
           <Image
             className="rounded-2xl"
             src="/img/output_512.jpg"
@@ -20,7 +20,7 @@ export default function About() {
             alt="Avatar"
           />
         </div>
-        <div className="flex justify-center space-x-4 smt-6">
+        <div className="flex justify-center item-center space-x-4 smt-6">
           <a className="w-5 h-5" title="Email" href="">
             <AtSign size="100%" stroke="gray" />
           </a>

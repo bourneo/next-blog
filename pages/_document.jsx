@@ -1,8 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 import { background_color } from '../lib/constant';
 
-// const background_color = 'bg-slate-800';
-
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
     const initialProps = await Document.getInitialProps(ctx);

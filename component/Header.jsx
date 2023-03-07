@@ -3,8 +3,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
-
-const head_foot_color = 'bg-slate-600';
+import { background_color_head_food, text_color_light } from '../lib/constant';
 
 const menu = [
   { title: 'Home', href: '/', delay: 'delay-[100ms]' },
@@ -38,8 +37,8 @@ export default function Header() {
   };
 
   return (
-    <header className={`${head_foot_color}`}>
-      <div className="py-3 border-b text-gray-200">
+    <header className={`${background_color_head_food} ${text_color_light}`}>
+      <div className="py-3 border-b ">
         <div className="flex justify-between max-w-5xl mx-auto px-4 ">
           <Link className="flex items-center" href="/">
             <Image
@@ -49,7 +48,7 @@ export default function Header() {
               width={32}
               height={32}
             />
-            <p className="ml-2 font-bold text-xl ">DoveRank</p>
+            <p className="font-bold text-xl ml-2 ">DoveRank</p>
           </Link>
           <nav className="hidden md:flex items-center tracking-wider">
             {menu.map((item) => (
