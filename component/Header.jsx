@@ -22,7 +22,6 @@ const ToggleIcon = ({ icon: Icon, hidden }) => {
   );
 };
 
-// todo
 export default function Header() {
   const [active, setActive] = useState(false);
 
@@ -40,6 +39,7 @@ export default function Header() {
     <header className={`${background_color_head_food} ${text_color_light}`}>
       <div className="py-3 border-b ">
         <div className="flex justify-between max-w-5xl mx-auto px-4 ">
+          {/*banner left*/}
           <Link className="flex items-center" href="/">
             <Image
               className="rounded-lg"
@@ -48,8 +48,10 @@ export default function Header() {
               width={32}
               height={32}
             />
-            <p className="font-bold text-xl ml-2 ">DoveRank</p>
+            <div className="font-bold text-xl ml-2 ">DoveRank</div>
           </Link>
+
+          {/*banner right*/}
           <nav className="hidden md:flex items-center tracking-wider">
             {menu.map((item) => (
               <Link
@@ -68,14 +70,18 @@ export default function Header() {
               </Link>
             ))}
           </nav>
+
+          {/*status*/}
           <button className="visible md:hidden w-5 h-5 relative" onClick={toggle}>
             <ToggleIcon icon={Bars3Icon} hidden={active} />
             <ToggleIcon icon={XMarkIcon} hidden={!active} />
           </button>
+
+          {/*hidden menu*/}
           <Transition
             show={active}
             as="ul"
-            className="flex flex-col space-y-2 p-4 absolute left-0 top-10 w-full h-screen bg-white"
+            className="flex flex-col p-4 absolute left-0 top-20 w-full h-screen bg-slate-700 "
             enter="transition duration-[50ms]"
             enterFrom="opacity-0"
             enterTo="opacity-100"
@@ -92,7 +98,7 @@ export default function Header() {
                 enterTo="opacity-100 translate-x-0"
               >
                 <Link
-                  className="block py-4 px-2 text-sm font-semibold text-gray-600"
+                  className="block py-4 px-2 text-sm font-medium text-gray-300 "
                   href={item.href}
                   onClick={handleLinkClick}
                 >

@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { text_color_dark } from '../lib/constant';
+// const text_color_dark = 'text-gray-800';
 
 export default function TagBadge({ tag }) {
   return (
