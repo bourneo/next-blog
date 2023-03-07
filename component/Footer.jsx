@@ -1,7 +1,9 @@
-import { version } from '../lib/constant';
+import { head_foot_color, version, version_color } from '../lib/constant';
 
-const head_foot_color = 'bg-slate-600';
-const version_color = 'text-slate-600';
+// const { version } = require('/package.json');
+
+// const head_foot_color = 'bg-slate-600';
+// const version_color = 'text-slate-600';
 
 export default function Footer() {
   return (

@@ -37,7 +37,7 @@ export default function BlogItem({ blog }) {
 
         <Head4Content item={blog} />
 
-        <div className="flex space-x-4 ">
+        <div className="flex justify-center space-x-4 ">
           <span className="text-medium">Update: {blog.date}</span>
           <span className="text-medium">|</span>
           <span className="text-medium">Author: {blog.author}</span>

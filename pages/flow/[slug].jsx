@@ -31,7 +31,7 @@ export default function FlowItem({ flow }) {
 
       <Head4Content item={flow} />
 
-      <div className="flex space-x-4 ">
+      <div className="flex justify-center space-x-4 ">
         <span className="text-medium">Update: {flow.date}</span>
         <span className="text-medium">|</span>
         <span className="text-medium">Author: {flow.author}</span>
