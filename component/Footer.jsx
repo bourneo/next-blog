@@ -6,7 +6,7 @@ const text_color_gray = 'text-gray-300';
 
 export default function Footer() {
   return (
-    <footer className="max-w-5xl text-sm ">
+    <footer className="mx-auto max-w-5xl text-sm ">
       <div className={`${text_color_gray} `}>
         <div className="flex justify-center item-center mt-4">
           <div>Copyright &copy; 2023 DoveRank</div>
