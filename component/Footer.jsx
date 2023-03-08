@@ -1,7 +1,7 @@
 import packageInfo from '../package.json';
 
 const text_color_deep = 'text-gray-400';
-const text_color_version = 'text-gray-600';
+const text_color_version = 'text-slate-600';
 const text_color_gray = 'text-gray-300';
 
 export default function Footer() {
