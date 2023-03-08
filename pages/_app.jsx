@@ -3,7 +3,7 @@ import '../lib/index.css'; // tailwind base
 import Header from '../component/Header';
 import Footer from '../component/Footer';
 
-const background_color_body = 'bg-slate-800';
+const background_color_body = 'bg-slate-700';
 
 export default function MyApp({ Component, pageProps }) {
   return (

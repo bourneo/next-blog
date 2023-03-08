@@ -1,4 +1,4 @@
-import { version } from '../package.json';
+import packageInfo from '../package.json';
 
 const text_color_deep = 'text-gray-400';
 const text_color_version = 'text-gray-600';
@@ -6,7 +6,7 @@ const text_color_gray = 'text-gray-300';
 
 export default function Footer() {
   return (
-    <footer className="max-w-5xl border-t text-sm ">
+    <footer className="max-w-5xl text-sm ">
       <div className={`${text_color_gray} `}>
         <div className="flex justify-center item-center mt-4">
           <div>Copyright &copy; 2023 DoveRank</div>
@@ -27,7 +27,7 @@ export default function Footer() {
         </div>
 
         <div className="flex justify-center item-center">
-          <div className={`${text_color_version}`}>{version}</div>
+          <div className={`${text_color_version}`}>{packageInfo.version}</div>
         </div>
       </div>
     </footer>

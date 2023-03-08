@@ -39,7 +39,7 @@ export default function Header() {
 
   return (
     <header className={`${text_color_light}`}>
-      <div className="py-3 border-b ">
+      <div className="py-3 ">
         <div className="flex justify-between max-w-5xl mx-auto px-4 ">
           {/*banner left*/}
           <Link className="flex items-center" href="/">
@@ -72,11 +72,12 @@ export default function Header() {
             <ToggleIcon icon={XMarkIcon} hidden={!active} />
           </button>
 
+          {/*<MenuHidden active={active} menu={menu} handleLinkClick={handleLinkClick} />*/}
           {/*hidden menu*/}
           <Transition
             show={active}
             as="ul"
-            className="flex flex-col p-4 absolute left-0 top-14 w-full  bg-slate-700 "
+            className="p-4 absolute left-0 top-14 w-full h-full bg-slate-700 "
             enter="transition duration-[50ms]"
             enterFrom="opacity-0"
             enterTo="opacity-100"
@@ -97,13 +98,14 @@ export default function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={handleLinkClick}
-                    className="flex block py-4 px-2 text-sm font-medium text-gray-300 "
+                    className="flex py-4 px-2 text-sm font-medium text-gray-300 "
                   >
                     <MenuButton title={item.title} />
                   </Link>
                 </Transition.Child>
               ))}
             </div>
+            <div className="fixed bottom-3">DoveRank</div>
           </Transition>
         </div>
       </div>
