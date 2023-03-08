@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { AtSign, GitHub, Send } from 'react-feather';
 import Head4Page from '../component/Head4Page';
 import Banner from '../component/Banner';
@@ -23,15 +24,15 @@ export default function About() {
             />
           </div>
           <div className="flex justify-center item-center space-x-4 smt-6">
-            <a className="w-5 h-5" title="Telegram" href="/">
+            <Link className="w-5 h-5" title="Telegram" href="/">
               <Send size="100%" stroke="gray" />
-            </a>
-            <a className="w-5 h-5" title="Email" href="/">
+            </Link>
+            <Link className="w-5 h-5" title="Email" href="/">
               <AtSign size="100%" stroke="gray" />
-            </a>
-            <a className="w-5 h-5" title="GitHub" href="/">
+            </Link>
+            <Link className="w-5 h-5" title="GitHub" href="/">
               <GitHub size="100%" stroke="gray" />
-            </a>
+            </Link>
           </div>
         </div>
       </RadiusBox>
