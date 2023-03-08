@@ -10,7 +10,7 @@ export default function MyApp({ Component, pageProps }) {
     <div className="h-screen">
       <Header />
 
-      <div className={`${background_color_body}  min-h-84% py-0.5`}>
+      <div className={`${background_color_body} min-h-84% py-1 `}>
         <Component {...pageProps} />
       </div>
 

@@ -6,6 +6,7 @@ import Head4Content from '../../component/Head4Content';
 import ContentAddition from '../../component/ContentAddition';
 // Syntax highlight
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
+import RadiusBox from '../../component/RadiusBox';
 
 export async function getStaticPaths() {
   const list = getFlowSlugList();
@@ -33,10 +34,11 @@ export default function FlowItem({ flow }) {
       <Head4Content item={flow} />
 
       <ContentAddition item={flow} />
-
-      <article className="py-8 max-w-2xl mx-auto prose dark:prose-invert ">
-        <MDXRemote {...flow.content} components={{ img: (props) => <Image {...props} /> }} />
-      </article>
+      <RadiusBox>
+        <div className="py-8 max-w-2xl mx-auto prose dark:prose-invert ">
+          <MDXRemote {...flow.content} components={{ img: (props) => <Image {...props} /> }} />
+        </div>
+      </RadiusBox>
     </div>
   );
 }

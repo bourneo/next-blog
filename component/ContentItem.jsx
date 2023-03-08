@@ -15,7 +15,7 @@ export default function ContentItem({ content, showBadge }) {
 
         {/*type date*/}
         <div className={`${text_color_gray}`}>
-          <div className="flex space-x-2 text-sm -mx-1 ">
+          <div className="flex space-x-2 text-sm ">
             {showBadge && <TypeBadge type={content.type} />}
             <div>{content.date}</div>
           </div>
