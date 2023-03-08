@@ -2,7 +2,7 @@ import Head4Page from '../../component/Head4Page';
 import Banner from '../../component/Banner';
 import { getListByTag } from '../../lib/common';
 import ContentItem from '../../component/ContentItem';
-import TagBadge from '../../component/TagBadge';
+import TagSet from '../../component/TagSet';
 
 export async function getStaticProps() {
   const list = getListByTag('All');
@@ -16,16 +16,10 @@ export default function TagIndex({ list }) {
 
       <Banner banner="Tags" />
 
-      {/*tag*/}
-      <p className="flex justify-center item-center pt-6 space-x-4">
-        <TagBadge key="All" tag="All" />
-        {list[0].map((tag) => (
-          <TagBadge key={tag} tag={tag} />
-        ))}
-      </p>
+      <TagSet list={list} />
 
       {/*list*/}
-      <div className="pt-6 ">
+      <div>
         {list[1]?.map((content) => (
           <ContentItem key={content.slug} content={content} showBadge />
         ))}

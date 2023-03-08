@@ -15,7 +15,7 @@ export default function BlogIndex({ list }) {
 
       <Banner banner={'Blog'} />
 
-      <div className="pt-6">
+      <div>
         {list?.map((content) => (
           <ContentItem key={content.slug} content={content} />
         ))}

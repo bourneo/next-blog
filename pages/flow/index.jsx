@@ -15,7 +15,7 @@ export default function FlowIndex({ list }) {
 
       <Banner banner={'Flow'} />
 
-      <div className="pt-6">
+      <div>
         {list?.map((content) => (
           <ContentItem key={content.slug} content={content} />
         ))}

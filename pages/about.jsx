@@ -10,7 +10,7 @@ export default function About() {
 
       <Banner banner={'About'} />
 
-      <div className="py-8">
+      <div>
         <div className="flex justify-center item-center mb-8">
           <Image
             className="rounded-2xl"
