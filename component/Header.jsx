@@ -4,7 +4,6 @@ import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import MenuButton from './MenuButton';
-import ProgressBar from './ProgressBar';
 
 const text_color_light = 'text-gray-200';
 
