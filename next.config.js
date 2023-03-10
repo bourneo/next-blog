@@ -15,9 +15,9 @@ module.exports = {
     // loader: 'default',
     // domains: ['doverank.com'],
   },
-  // experimental: {
-  //   scrollRestoration: true,
-  // },
+  experimental: {
+    scrollRestoration: true,
+  },
   // async redirects() {
   //   return [
   //     // ...
