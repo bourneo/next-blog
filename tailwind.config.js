@@ -27,6 +27,10 @@ module.exports = {
       '85%': '85%',
       '90%': '90%',
     },
+    fontSize: {
+      x2s: '0.6rem',
+      x3s: '0.5rem',
+    },
     extend: {
       colors: {
         regalGray: '#243c5a',

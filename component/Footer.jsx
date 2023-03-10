@@ -6,30 +6,20 @@ const text_color_version = 'text-slate-900';
 
 export default function Footer() {
   return (
-    <footer className="mx-auto max-w-5xl text-sm ">
-      <div className={`${text_color_gray} `}>
-        <div className="flex justify-center item-center mt-4">
-          <div>Copyright &copy; 2023 · DoveRank</div>
-        </div>
+    <footer className="flex flex-col max-w-5xl text-x2s mt-2 ">
+      <div className={`${text_color_gray} m-auto `}>
+        Copyright &copy; 2023 · DoveRank · All Rights Reserved
       </div>
 
-      <div className="text-xs mt-2 space-y-1 ">
-        <div className={`${text_color_deep}`}>
-          <div className="flex justify-center item-center">
-            We may use cookies to enhance your experience.
-          </div>
-        </div>
-
-        <div className={`${text_color_deep}`}>
-          <div className="flex justify-center item-center">
-            By continuing to visit this site you agree to our use of cookies.
-          </div>
-        </div>
-
-        <div className="flex justify-center item-center">
-          <div className={`${text_color_version}`}>{packageInfo.version}</div>
-        </div>
+      <div className={`${text_color_deep} m-auto  mt-1 `}>
+        We may use cookies to enhance your experience.
       </div>
+
+      <div className={`${text_color_deep} m-auto`}>
+        By continuing to visit this site you agree to our use of cookies.
+      </div>
+
+      <div className={`${text_color_version}`}>{packageInfo.version}</div>
     </footer>
   );
 }
