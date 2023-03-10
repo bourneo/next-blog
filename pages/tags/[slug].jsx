@@ -8,11 +8,11 @@ export async function getStaticPaths() {
   const list = getListByTag('All');
   const tagSet = list[0];
   tagSet.push('All');
+
   return {
     paths: tagSet.map((tag) => ({
       params: { slug: tag },
     })),
-    // fallback: false,
     fallback: 'blocking',
   };
 }
