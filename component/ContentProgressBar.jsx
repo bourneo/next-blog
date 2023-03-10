@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function ProgressBar() {
+export default function ContentProgressBar() {
   const [progress, setProgress] = useState(0);
   useEffect(() => {
     function updateScroll() {
