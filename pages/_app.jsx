@@ -5,8 +5,7 @@ import Footer from '../component/Footer';
 import Router from 'next/router';
 import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css';
-// import BackToTop from '../component/BackToTop';
-import useScrollRestoration from '../component/ScrollRestoration';
+import TopJumper from '../component/TopJumper';
 
 const background_color_body = 'bg-slate-800';
 
@@ -20,10 +19,12 @@ export default function MyApp({ Component, pageProps }) {
   return (
     <div className="h-screen">
       <Header />
-      {useScrollRestoration(Router)}
+
       <div className={`${background_color_body} min-h-84% py-0.5 `}>
         <Component {...pageProps} />
+        {/*{useScrollRestoration(Router)}*/}
         {/*<BackToTop />*/}
+        <TopJumper />
       </div>
 
       <Footer />

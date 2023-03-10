@@ -19,7 +19,7 @@ export default function Footer() {
         By continuing to visit this site you agree to our use of cookies.
       </div>
 
-      <div className={`${text_color_version}`}>{packageInfo.version}</div>
+      <div className={`${text_color_version}  m-auto`}>{packageInfo.version}</div>
     </footer>
   );
 }
