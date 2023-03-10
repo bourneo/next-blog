@@ -46,78 +46,76 @@ export default function Header() {
 
   return (
     <header className={`${text_color_light}`}>
-      <div className="py-3 ">
-        <div className="flex justify-between max-w-5xl mx-auto px-4 ">
-          {/*banner left*/}
-          <Link className="flex items-center" href="/">
-            <Image
-              className="rounded-lg"
-              src="/img/output_128.jpg"
-              alt="Avatar"
-              width={32}
-              height={32}
-            />
-            <div className="font-bold text-xl ml-2 ">DoveRank</div>
-          </Link>
+      <div className="flex mx-auto justify-between max-w-5xl px-4 py-3 ">
+        {/*banner left*/}
+        <Link className="flex items-center" href="/">
+          <Image
+            className="rounded-lg"
+            src="/img/output_128.jpg"
+            alt="Avatar"
+            width={32}
+            height={32}
+          />
+          <div className="font-bold text-xl ml-2 ">DoveRank</div>
+        </Link>
 
-          {/*banner right*/}
-          <nav className="hidden md:flex items-center tracking-wider">
-            {menu.map((item) => (
-              <Link
+        {/*banner right*/}
+        <nav className="hidden md:flex items-center tracking-wider">
+          {menu.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className={pathname === item.href ? classMenuBase + ' opacity-60' : classMenuBase}
+            >
+              <MenuButton title={item.title} />
+            </Link>
+          ))}
+        </nav>
+
+        {/*status*/}
+        <button className="visible md:hidden w-5 h-5 relative" onClick={toggle}>
+          <ToggleIcon icon={Bars3Icon} hidden={active} />
+          <ToggleIcon icon={XMarkIcon} hidden={!active} />
+        </button>
+
+        {/*hidden menu*/}
+        <Transition
+          show={active}
+          as="ul"
+          className="p-4 absolute left-0 top-14 w-full h-full bg-slate-700 "
+          enter="transition duration-[50ms]"
+          enterFrom="opacity-0"
+          enterTo="opacity-100"
+          leave="transition duration-[20ms] ease-in-out"
+          leaveFrom="opacity-100"
+          leaveTo="opacity-0"
+        >
+          <div>
+            {menu.map((item, index) => (
+              <Transition.Child
                 key={item.href}
-                href={item.href}
-                className={pathname === item.href ? classMenuBase + ' opacity-60' : classMenuBase}
+                as="li"
+                enter={`transition duration-300 ${item.delay}`}
+                enterFrom="opacity-0 -translate-x-5"
+                enterTo="opacity-100 translate-x-0"
               >
-                <MenuButton title={item.title} />
-              </Link>
-            ))}
-          </nav>
-
-          {/*status*/}
-          <button className="visible md:hidden w-5 h-5 relative" onClick={toggle}>
-            <ToggleIcon icon={Bars3Icon} hidden={active} />
-            <ToggleIcon icon={XMarkIcon} hidden={!active} />
-          </button>
-
-          {/*hidden menu*/}
-          <Transition
-            show={active}
-            as="ul"
-            className="p-4 absolute left-0 top-14 w-full h-full bg-slate-700 "
-            enter="transition duration-[50ms]"
-            enterFrom="opacity-0"
-            enterTo="opacity-100"
-            leave="transition duration-[20ms] ease-in-out"
-            leaveFrom="opacity-100"
-            leaveTo="opacity-0"
-          >
-            <div>
-              {menu.map((item, index) => (
-                <Transition.Child
+                <Link
                   key={item.href}
-                  as="li"
-                  enter={`transition duration-300 ${item.delay}`}
-                  enterFrom="opacity-0 -translate-x-5"
-                  enterTo="opacity-100 translate-x-0"
+                  href={item.href}
+                  className={
+                    pathname === item.href
+                      ? classHiddenMenuBase + ' opacity-60'
+                      : classHiddenMenuBase
+                  }
+                  onClick={handleLinkClick}
                 >
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    className={
-                      pathname === item.href
-                        ? classHiddenMenuBase + ' opacity-60'
-                        : classHiddenMenuBase
-                    }
-                    onClick={handleLinkClick}
-                  >
-                    <MenuButton title={item.title} />
-                  </Link>
-                </Transition.Child>
-              ))}
-            </div>
-            <div className="fixed bottom-3">DoveRank</div>
-          </Transition>
-        </div>
+                  <MenuButton title={item.title} />
+                </Link>
+              </Transition.Child>
+            ))}
+          </div>
+          <div className="fixed bottom-3">DoveRank</div>
+        </Transition>
       </div>
     </header>
   );
