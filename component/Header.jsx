@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import MenuButton from './MenuButton';
+import { useRouter } from 'next/router';
 
 const text_color_light = 'text-gray-200';
 
@@ -25,8 +26,14 @@ const ToggleIcon = ({ icon: Icon, hidden }) => {
 };
 
 export default function Header() {
-  const [active, setActive] = useState(false);
+  const router = useRouter();
+  const { pathname } = router;
 
+  const classMenuBase =
+    "flex items-center text-sm text-gray-300 hover:opacity-60 after:content-['·'] after:mx-3 last:after:hidden";
+  const classHiddenMenuBase = 'flex py-4 px-2 text-sm font-medium text-gray-300 hover:opacity-60';
+
+  const [active, setActive] = useState(false);
   const toggle = () => setActive(!active);
 
   useEffect(() => {
@@ -59,7 +66,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center hover:opacity-60 after:content-['·'] after:mx-3 after:text-gray-300 after:text-sm last:after:hidden"
+                className={pathname === item.href ? classMenuBase + ' opacity-60' : classMenuBase}
               >
                 <MenuButton title={item.title} />
               </Link>
@@ -96,7 +103,11 @@ export default function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    className="flex py-4 px-2 text-sm font-medium text-gray-300 "
+                    className={
+                      pathname === item.href
+                        ? classHiddenMenuBase + ' opacity-60'
+                        : classHiddenMenuBase
+                    }
                     onClick={handleLinkClick}
                   >
                     <MenuButton title={item.title} />
