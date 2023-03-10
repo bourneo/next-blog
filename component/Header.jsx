@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { Transition } from '@headlessui/react';
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import MenuButton from './MenuButton';
+import ProgressBar from './ProgressBar';
 
 const text_color_light = 'text-gray-200';
 
@@ -59,7 +60,7 @@ export default function Header() {
               <Link
                 key={item.href}
                 href={item.href}
-                className="flex items-center hover:opacity-60 after:content-['|'] after:mx-3 after:text-gray-300 after:text-sm last:after:hidden"
+                className="flex items-center hover:opacity-60 after:content-['·'] after:mx-3 after:text-gray-300 after:text-sm last:after:hidden"
               >
                 <MenuButton title={item.title} />
               </Link>
@@ -72,7 +73,6 @@ export default function Header() {
             <ToggleIcon icon={XMarkIcon} hidden={!active} />
           </button>
 
-          {/*<MenuHidden active={active} menu={menu} handleLinkClick={handleLinkClick} />*/}
           {/*hidden menu*/}
           <Transition
             show={active}
@@ -97,8 +97,8 @@ export default function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
-                    onClick={handleLinkClick}
                     className="flex py-4 px-2 text-sm font-medium text-gray-300 "
+                    onClick={handleLinkClick}
                   >
                     <MenuButton title={item.title} />
                   </Link>

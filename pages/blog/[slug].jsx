@@ -7,6 +7,7 @@ import Head4Content from '../../component/Head4Content';
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
 import ContentAddition from '../../component/ContentAddition';
 import RadiusBox from '../../component/RadiusBox';
+import ProgressBar from '../../component/ProgressBar';
 
 export async function getStaticPaths() {
   const blogs = getBlogSlugList();
@@ -31,6 +32,7 @@ export default function BlogItem({ blog }) {
       {/*<div className="absolute right-0">*/}
       {/*  <TableOfContents></TableOfContents>*/}
       {/*</div>*/}
+      <ProgressBar />
 
       <div className="max-w-3xl mx-auto ">
         <div className="">

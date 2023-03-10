@@ -9,7 +9,7 @@ export default function Footer() {
     <footer className="mx-auto max-w-5xl text-sm ">
       <div className={`${text_color_gray} `}>
         <div className="flex justify-center item-center mt-4">
-          <div>Copyright &copy; 2023 DoveRank</div>
+          <div>Copyright &copy; 2023 · DoveRank</div>
         </div>
       </div>
 
