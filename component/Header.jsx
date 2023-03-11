@@ -48,7 +48,7 @@ export default function Header() {
     <header className={`${text_color_light}`}>
       <div className="flex mx-auto justify-between max-w-5xl px-4 py-3 ">
         {/*banner left*/}
-        <Link className="flex items-center" href="/">
+        <Link className="flex items-center " href="/">
           <Image
             className="rounded-lg"
             src="/img/output_128.jpg"
