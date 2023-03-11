@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { AtSign, GitHub, Send } from 'react-feather';
 import Head4Page from '../component/Head4Page';
 import Banner from '../component/Banner';
-import RadiusBox from '../component/RadiusBox';
+import RadiusLayout from '../component/RadiusLayout';
 
 export default function About() {
   return (
@@ -12,7 +12,7 @@ export default function About() {
 
       <Banner banner={'About'} />
 
-      <RadiusBox>
+      <RadiusLayout>
         <div className="py-6">
           <div className="flex justify-center item-center mb-8">
             <Image
@@ -35,7 +35,7 @@ export default function About() {
             </Link>
           </div>
         </div>
-      </RadiusBox>
+      </RadiusLayout>
     </div>
   );
 }

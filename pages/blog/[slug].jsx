@@ -6,7 +6,7 @@ import Head4Content from '../../component/Head4Content';
 // Syntax highlight
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
 import ContentAddition from '../../component/ContentAddition';
-import RadiusBox from '../../component/RadiusBox';
+import RadiusLayout from '../../component/RadiusLayout';
 import ContentProgressBar from '../../component/ContentProgressBar';
 
 export async function getStaticPaths() {
@@ -43,11 +43,11 @@ export default function BlogItem({ blog }) {
 
         <ContentAddition item={blog} />
 
-        <RadiusBox>
+        <RadiusLayout>
           <div className="py-8 max-w-2xl mx-auto prose dark:prose-invert ">
             <MDXRemote {...blog.content} components={{ img: (props) => <Image {...props} /> }} />
           </div>
-        </RadiusBox>
+        </RadiusLayout>
       </div>
     </div>
   );

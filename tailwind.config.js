@@ -17,7 +17,6 @@ module.exports = {
       '90%': '90%',
     },
     maxHeight: {
-      '20%': '20%',
       '25%': '25%',
       '50%': '50%',
       '75%': '75%',
@@ -35,10 +34,6 @@ module.exports = {
       sm: '0.8rem',
       base: '1rem',
       xl: '1.25rem',
-      // '2xl': '1.563rem',
-      // '3xl': '1.953rem',
-      // '4xl': '2.441rem',
-      // '5xl': '3.052rem',
     },
     extend: {
       colors: {

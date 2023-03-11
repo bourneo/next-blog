@@ -1,13 +1,13 @@
 import { Calendar, Clock, Edit } from 'react-feather';
-import RadiusBox from './RadiusBox';
+import RadiusBoxLight from './RadiusLayoutLight';
 
 const text_color_gray = 'text-gray-300';
 
 export default function ContentAddition({ item }) {
   return (
-    <RadiusBox>
+    <RadiusBoxLight>
       <div className={`${text_color_gray} py-3`}>
-        <span className="flex justify-center item-center space-x-3 text-medium">
+        <span className="flex justify-center item-center space-x-2 text-sm">
           <Calendar size="16" className="mt-1" />
           <span>{item.date}</span>
           <span>|</span>
@@ -18,6 +18,6 @@ export default function ContentAddition({ item }) {
           <span>{item.eta}</span>
         </span>
       </div>
-    </RadiusBox>
+    </RadiusBoxLight>
   );
 }

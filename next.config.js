@@ -10,7 +10,7 @@ const needRedirectPostList = [
 /** @type {import('next').NextConfig} */
 module.exports = {
   images: {
-    // unoptimized: true,
+    unoptimized: true,
     formats: ['image/avif', 'image/webp'],
     // loader: 'default',
     // domains: ['doverank.com'],
