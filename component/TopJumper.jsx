@@ -5,7 +5,7 @@ export default function TopJumper() {
   const [show, switchShow] = useState(false);
   useEffect(() => {
     const listener = createThrottle(() => {
-      const shouldShow = window.scrollY > 300;
+      const shouldShow = window.scrollY > 200;
       if (shouldShow !== show) {
         switchShow(shouldShow);
       }
