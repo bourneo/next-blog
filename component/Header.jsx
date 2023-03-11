@@ -52,7 +52,7 @@ export default function Header() {
         <Link className="flex items-center " href="/">
           <Image
             className="rounded-lg mx-2"
-            src="/img/output_128.jpg"
+            src="/icon/output_128.jpg"
             alt="Avatar"
             width={32}
             height={32}

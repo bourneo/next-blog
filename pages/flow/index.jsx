@@ -13,7 +13,17 @@ export default function FlowIndex({ list }) {
     <div className="max-w-3xl mx-auto">
       <Head4Page title={'DoveRank - Flow'} />
 
-      <Banner banner={'Flow'} />
+      <div>
+        <div className="flex justify-center items-center ">
+          <div
+            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/planet-in-dark-space-3840x2160.jpg')]`}
+          >
+            <div className="flex justify-center items-center h-32 w-screen ">
+              <div className="text-xl text-white font-bold tracking-wider ">Flow</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <div>
         {list?.map((content) => (

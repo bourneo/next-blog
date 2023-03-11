@@ -10,14 +10,24 @@ export default function About() {
     <div className="max-w-3xl mx-auto">
       <Head4Page title={'About - DoveRank'} />
 
-      <Banner banner={'About'} />
+      <div>
+        <div className="flex justify-center items-center ">
+          <div
+            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/Columba-Arp-Madore-608-333-potw2240a-large.jpg')]`}
+          >
+            <div className="flex justify-center items-center h-32 w-screen max-w-5xl ">
+              <div className="text-xl text-white font-bold tracking-wider ">About</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <RadiusLayout>
         <div className="py-6">
           <div className="flex justify-center item-center mb-8">
             <Image
               className="rounded-2xl"
-              src="/img/output_512.jpg"
+              src="/icon/output_512.jpg"
               width={100}
               height={100}
               alt="Avatar"

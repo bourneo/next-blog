@@ -4,7 +4,7 @@ export default function Head4Content({ item }) {
   return (
     <Head>
       <title>{item.title}</title>
-      <link rel="icon" href="/img/favicon.jpg" />
+      <link rel="icon" href="/favicon.icon" />
       <meta name="author" content="DoveRank" />
       <meta name="keywords" content={item.tags} />
       <meta name="description" content={item.description || ''} />
