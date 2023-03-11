@@ -36,7 +36,7 @@ export default function BlogItem({ blog }) {
 
       <div className="max-w-3xl mx-auto ">
         <div className="">
-          {blog.cover_path && <CoverContent path={blog.cover_path} alt={blog.title} />}
+          {blog.coverPath && <CoverContent path={blog.coverPath} alt={blog.title} />}
         </div>
 
         <Head4Content item={blog} />

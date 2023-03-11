@@ -28,7 +28,7 @@ export default function FlowItem({ flow }) {
   return (
     <div className="max-w-3xl mx-auto ">
       <div className="">
-        {flow.cover_path && <CoverContent path={flow.cover_path} alt={flow.title} />}
+        {flow.coverPath && <CoverContent path={flow.coverPath} alt={flow.title} />}
       </div>
 
       <Head4Content item={flow} />
