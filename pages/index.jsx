@@ -11,7 +11,7 @@ export async function getStaticProps() {
 export default function Home({ list }) {
   return (
     <div>
-      <Head4Page title={'DoveRank: Rank Everything'} />
+      <Head4Page title={'DoveRank: Rank Something'} />
       <CoverHome />
       <div className="max-w-3xl mx-auto">
         {list?.map((content) => (

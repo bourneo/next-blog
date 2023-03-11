@@ -19,13 +19,15 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
   const list = getListByTag(params.slug);
-  return { props: { list } };
+  return { props: { res: [list, params.slug] } };
 }
 
-export default function TagItem({ list }) {
+export default function TagItem({ res }) {
+  const list = res[0];
+  const slug = res[1];
   return (
     <div className="max-w-3xl mx-auto ">
-      <Head4Page title={'Tags - DoveRank'} />
+      <Head4Page title={'DoveRank - ' + slug} />
 
       <Banner banner="Tags" />
 

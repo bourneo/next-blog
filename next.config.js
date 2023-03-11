@@ -13,7 +13,7 @@ module.exports = {
     unoptimized: true,
     formats: ['image/avif', 'image/webp'],
     // loader: 'default',
-    // domains: ['doverank.com'],
+    // domains: ['DoveRank.com'],
   },
   experimental: {
     scrollRestoration: true,
