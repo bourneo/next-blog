@@ -26,7 +26,7 @@ export default function ContentProgressBar() {
       style={{
         transform: `translateX(${progress - 100}%)`,
       }}
-      className="fixed top-0 left-0 h-px w-full bg-slate-700 backdrop-blur-3xl transition-transform duration-150"
+      className="fixed top-0 left-0 h-px w-full bg-gray-600 backdrop-blur-3xl transition-transform duration-150"
     />
   );
 }

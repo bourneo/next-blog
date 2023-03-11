@@ -30,8 +30,9 @@ export default function Header() {
   const { pathname } = router;
 
   const classMenuBase =
-    "flex items-center text-sm text-gray-300 hover:opacity-60 after:content-['·'] after:mx-3 last:after:hidden";
-  const classHiddenMenuBase = 'flex py-4 px-2 text-sm font-medium text-gray-300 hover:opacity-60';
+    "flex items-center text-gray-300 hover:opacity-60 after:content-['·'] after:mx-3" +
+    ' last:after:hidden';
+  const classHiddenMenuBase = 'flex py-4 px-2 font-medium text-gray-300 hover:opacity-60';
 
   const [active, setActive] = useState(false);
   const toggle = () => setActive(!active);
@@ -46,21 +47,21 @@ export default function Header() {
 
   return (
     <header className={`${text_color_light}`}>
-      <div className="flex mx-auto justify-between max-w-5xl px-4 py-3 ">
+      <div className="flex mx-auto justify-between max-w-5xl px-4 py-3 text-sm">
         {/*banner left*/}
         <Link className="flex items-center " href="/">
           <Image
-            className="rounded-lg"
+            className="rounded-lg mx-2"
             src="/img/output_128.jpg"
             alt="Avatar"
             width={32}
             height={32}
           />
-          <div className="font-bold text-xl ml-2 ">DoveRank</div>
+          <div className="font-bold ">DoveRank</div>
         </Link>
 
         {/*banner right*/}
-        <nav className="hidden md:flex items-center tracking-wider">
+        <nav className="hidden md:flex items-center tracking-wider mx-2">
           {menu.map((item) => (
             <Link
               key={item.href}

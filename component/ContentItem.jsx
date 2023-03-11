@@ -22,7 +22,7 @@ export default function ContentItem({ content, showBadge }) {
         </div>
 
         {/*title*/}
-        <div className={`${text_color_light} text-xl font-medium `}>
+        <div className={`${text_color_light} text-md font-medium `}>
           <div className="hover:underline underline-offset-4">
             <Link href={`/${content.type}/${content.slug}`}>{content.title}</Link>
           </div>
