@@ -8,9 +8,7 @@ export default function TagBadge({ tag }) {
     <div className={`${background_color_blue} px-2 py-1 rounded-lg `}>
       <div className={`hover:opacity-70 `}>
         <div className={`${text_color_dark} text-xs `}>
-          <Link href="/tags/[tag]" as={`/tags/${tag}`}>
-            {tag}
-          </Link>
+          <Link href={`/tags/${tag}`}>{tag}</Link>
         </div>
       </div>
     </div>
