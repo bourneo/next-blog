@@ -12,7 +12,7 @@ export default function About() {
       <div>
         <div className="flex justify-center items-center ">
           <div
-            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/Columba-Arp-Madore-608-333-potw2240a-large.jpg')]`}
+            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/Columba-Arp-Madore-608-333-potw2240a-large.webp')]`}
           >
             <div className="flex justify-center items-center h-32 w-screen max-w-5xl ">
               <div className="text-xl text-white font-bold tracking-wider ">About</div>

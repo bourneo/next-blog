@@ -16,7 +16,7 @@ export default function TagIndex({ list }) {
       <div>
         <div className="flex justify-center items-center ">
           <div
-            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/solar-system-4096x2304.jpg')]`}
+            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/solar-system-4096x2304.webp')]`}
           >
             <div className="flex justify-center items-center h-32 w-screen ">
               <div className="text-xl text-white font-bold tracking-wider ">Tags</div>

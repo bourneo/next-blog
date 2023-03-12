@@ -15,7 +15,7 @@ export default function BlogIndex({ list }) {
       <div>
         <div className="flex justify-center items-center ">
           <div
-            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/PIA23002-hires-5120x2880.jpg')]`}
+            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/PIA23002-hires-5120x2880.webp')]`}
           >
             <div className="flex justify-center items-center h-32 w-screen ">
               <div className="text-xl text-white font-bold tracking-wider ">Blog</div>

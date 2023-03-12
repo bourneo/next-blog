@@ -16,7 +16,7 @@ export default function FlowIndex({ list }) {
       <div>
         <div className="flex justify-center items-center ">
           <div
-            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/planet-in-dark-space-3840x2160.jpg')]`}
+            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/planet-in-dark-space-3840x2160.webp')]`}
           >
             <div className="flex justify-center items-center h-32 w-screen ">
               <div className="text-xl text-white font-bold tracking-wider ">Flow</div>

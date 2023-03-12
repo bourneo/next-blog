@@ -33,7 +33,7 @@ export default function Header() {
     "flex items-center text-gray-300 hover:opacity-70 after:content-['·'] after:mx-3" +
     ' last:after:hidden';
   const classHiddenMenuBase = 'flex py-4 px-2 font-medium text-gray-300 hover:opacity-70';
-  const highlightedMenu = 'brightness-150 font-bold';
+  const highlightedMenu = 'brightness-150 font-black';
 
   const [active, setActive] = useState(false);
   const toggle = () => setActive(!active);
@@ -58,7 +58,7 @@ export default function Header() {
             width={32}
             height={32}
           />
-          <div className="font-bold ">DoveRank</div>
+          <div className="font-bold text-md tracking-wider ">DoveRank</div>
         </Link>
 
         {/*banner right*/}
