@@ -1,5 +1,4 @@
 import TagBadge from './TagBadge';
-import RadiusLayoutLight from './RadiusLayoutLight';
 import RadiusLayoutBanner from './RadiusLayoutBanner';
 
 export default function TagSet({ list }) {

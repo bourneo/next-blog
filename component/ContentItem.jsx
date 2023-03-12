@@ -10,7 +10,7 @@ export default function ContentItem({ content, showBadge }) {
   return (
     // item on the list
     <RadiusLayoutItem>
-      <div className="flex ">
+      <div className="flex px-2 md:px-8">
         <div className="grow ">
           <div className="py-3 space-y-3">
             <div className="">{/*todo cover*/}</div>
@@ -44,9 +44,9 @@ export default function ContentItem({ content, showBadge }) {
           </div>
         </div>
 
-        <div className="left-0 Shrink rounded-xl ">
+        <div className="left-0 Shrink  ">
           <img
-            className="h-48 w-48 object-cover md:h-full md:w-48 py-3 "
+            className="h-full w-48 md:h-full md:w-48 object-cover rounded-3xl py-3 "
             src={content.coverPath}
             alt={content.title}
           />

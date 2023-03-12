@@ -34,7 +34,7 @@ export default function BlogItem({ blog }) {
       {/*</div>*/}
       <ContentProgressBar />
 
-      <div className="max-w-4xl mx-auto ">
+      <div className="max-w-5xl mx-auto ">
         <div className="">
           {blog.coverPath && <CoverContent path={blog.coverPath} alt={blog.title} />}
         </div>

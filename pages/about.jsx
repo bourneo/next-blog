@@ -14,7 +14,7 @@ export default function About() {
           <div
             className={`bg-cover bg-center bg-no-repeat bg-[url('/img/Columba-Arp-Madore-608-333-potw2240a-large.webp')]`}
           >
-            <div className="flex justify-center items-center h-32 w-screen max-w-5xl ">
+            <div className="flex justify-center items-center h-96 w-screen max-w-4xl ">
               <div className="text-xl text-white font-bold tracking-wider ">About</div>
             </div>
           </div>
@@ -32,6 +32,7 @@ export default function About() {
               alt="Avatar"
             />
           </div>
+
           <div className="flex justify-center item-center space-x-4 smt-6">
             <Link className="w-5 h-5" title="Telegram" href="/">
               <Send size="100%" stroke="gray" />
