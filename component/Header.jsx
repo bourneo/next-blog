@@ -30,8 +30,7 @@ export default function Header() {
   const { pathname } = router;
 
   const classMenuBase =
-    "flex items-center text-gray-300 hover:opacity-70 after:content-['·'] after:mx-3" +
-    ' last:after:hidden';
+    "flex items-center text-gray-300 hover:opacity-70 before:content-['·'] first:before:hidden before:mx-3 ";
   const classHiddenMenuBase = 'flex py-4 px-2 font-medium text-gray-300 hover:opacity-70';
   const highlightedMenu = 'brightness-150 font-black';
 
