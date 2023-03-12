@@ -38,7 +38,6 @@ export default function FlowItem({ flow }) {
 
       <ContentAddition item={flow} />
 
-      <ContentAddition item={flow} />
       <RadiusLayout>
         <div className="py-8 max-w-2xl mx-auto prose dark:prose-invert ">
           <MDXRemote

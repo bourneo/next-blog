@@ -13,7 +13,7 @@ export async function getStaticPaths() {
     paths: tagSet.map((tag) => ({
       params: { slug: tag },
     })),
-    fallback: 'blocking',
+    fallback: false,
   };
 }
 

@@ -10,7 +10,7 @@ export async function getStaticProps() {
 export default function BlogIndex({ list }) {
   return (
     <div className="max-w-3xl mx-auto">
-      <Head4Page title={'Blog - DoveRank'} />
+      <Head4Page title={'DoveRank - Blog'} />
 
       <div>
         <div className="flex justify-center items-center ">

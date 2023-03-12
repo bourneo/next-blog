@@ -7,7 +7,7 @@ import RadiusLayout from '../component/RadiusLayout';
 export default function About() {
   return (
     <div className="max-w-3xl mx-auto">
-      <Head4Page title={'About - DoveRank'} />
+      <Head4Page title={'DoveRank - About'} />
 
       <div>
         <div className="flex justify-center items-center ">
