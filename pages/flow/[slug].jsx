@@ -6,7 +6,7 @@ import Head4Content from '../../component/Head4Content';
 // Syntax highlight
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
 import ContentAddition from '../../component/ContentAddition';
-import RadiusLayout from '../../component/RadiusLayout';
+import RadiusLayoutItem from '../../component/RadiusLayoutItem';
 import ContentProgressBar from '../../component/ContentProgressBar';
 
 export async function getStaticPaths() {
@@ -27,7 +27,7 @@ export async function getStaticProps({ params }) {
 
 export default function FlowItem({ flow }) {
   return (
-    <div className="max-w-3xl mx-auto ">
+    <div className="max-w-4xl mx-auto ">
       <ContentProgressBar />
 
       <div className="">
@@ -38,14 +38,14 @@ export default function FlowItem({ flow }) {
 
       <ContentAddition item={flow} />
 
-      <RadiusLayout>
-        <div className="py-8 max-w-2xl mx-auto prose dark:prose-invert ">
+      <RadiusLayoutItem>
+        <div className="py-8 max-w-4xl mx-auto prose dark:prose-invert ">
           <MDXRemote
             {...flow.content}
             components={{ img: (props) => <Image {...props} alt="" /> }}
           />
         </div>
-      </RadiusLayout>
+      </RadiusLayoutItem>
     </div>
   );
 }

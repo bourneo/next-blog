@@ -11,15 +11,15 @@ export default function Footer() {
         Copyright &copy; 2023 · DoveRank · All Rights Reserved
       </div>
 
-      <div className={`${text_color_deep} m-auto  mt-1 `}>
+      <div className={`${text_color_deep} m-auto mt-1 `}>
         We may use cookies to enhance your experience.
       </div>
 
-      <div className={`${text_color_deep} m-auto`}>
+      <div className={`${text_color_deep} m-auto `}>
         By continuing to visit this site you agree to our use of cookies.
       </div>
 
-      <div className={`${text_color_version}  m-auto`}>{packageInfo.version}</div>
+      <div className={`${text_color_version} m-auto `}>{packageInfo.version}</div>
     </footer>
   );
 }

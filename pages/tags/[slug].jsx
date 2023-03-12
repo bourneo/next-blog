@@ -26,7 +26,7 @@ export default function TagItem({ res }) {
   const list = res[0];
   const slug = res[1];
   return (
-    <div className="max-w-3xl mx-auto ">
+    <div className="max-w-4xl mx-auto ">
       <Head4Page title={'DoveRank - ' + slug} />
 
       <div>

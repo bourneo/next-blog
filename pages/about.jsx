@@ -2,11 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { GitHub, Send } from 'react-feather';
 import Head4Page from '../component/Head4Page';
-import RadiusLayout from '../component/RadiusLayout';
+import RadiusLayoutItem from '../component/RadiusLayoutItem';
 
 export default function About() {
   return (
-    <div className="max-w-3xl mx-auto">
+    <div className="max-w-4xl mx-auto">
       <Head4Page title={'DoveRank - About'} />
 
       <div>
@@ -21,7 +21,7 @@ export default function About() {
         </div>
       </div>
 
-      <RadiusLayout>
+      <RadiusLayoutItem>
         <div className="py-6">
           <div className="flex justify-center item-center mb-8">
             <Image
@@ -44,7 +44,7 @@ export default function About() {
           {/*  <AtSign size="100%" stroke="gray" />*/}
           {/*</Link>*/}
         </div>
-      </RadiusLayout>
+      </RadiusLayoutItem>
     </div>
   );
 }

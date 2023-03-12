@@ -1,4 +1,4 @@
-const background_box_color = 'bg-blue-deep';
+const background_box_color = 'bg-gray-light';
 
 export default function RadiusLayoutLight({ children }) {
   return (

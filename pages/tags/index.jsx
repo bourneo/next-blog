@@ -10,7 +10,7 @@ export async function getStaticProps() {
 
 export default function TagIndex({ list }) {
   return (
-    <div className="max-w-3xl mx-auto ">
+    <div className="max-w-4xl mx-auto ">
       <Head4Page title={'DoveRank - Tags'} />
 
       <div>

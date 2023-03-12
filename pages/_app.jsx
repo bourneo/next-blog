@@ -7,7 +7,7 @@ import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css';
 import TopJumper from '../component/TopJumper';
 
-const background_color_body = 'bg-blue-light';
+const background_color_body = 'bg-blue-slate';
 
 NProgress.configure({ showSpinner: false });
 //Route Events.
@@ -20,7 +20,7 @@ export default function MyApp({ Component, pageProps }) {
     <div className="h-screen">
       <Header />
 
-      <div className={`${background_color_body} min-h-90% py-0.5 `}>
+      <div className={`${background_color_body} min-h-90% pb-1 `}>
         <Component {...pageProps} />
         {/*{useScrollRestoration(Router)}*/}
         {/*<BackToTop />*/}

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
 const text_color_dark = 'text-gray-300';
-const background_color_blue = 'bg-regal-blue';
+const background_color_blue = 'bg-blue-regal';
 
 export default function TagBadge({ tag }) {
   return (

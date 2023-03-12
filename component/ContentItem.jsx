@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import TypeBadge from './TypeBadge';
 import TagBadge from './TagBadge';
-import RadiusLayout from './RadiusLayout';
+import RadiusLayoutItem from './RadiusLayoutItem';
 
 const text_color_gray = 'text-gray-300';
 const text_color_light = 'text-gray-200';
@@ -9,7 +9,7 @@ const text_color_light = 'text-gray-200';
 export default function ContentItem({ content, showBadge }) {
   return (
     // item on the list
-    <RadiusLayout>
+    <RadiusLayoutItem>
       <div className="flex ">
         <div className="grow ">
           <div className="py-3 space-y-3">
@@ -52,6 +52,6 @@ export default function ContentItem({ content, showBadge }) {
           />
         </div>
       </div>
-    </RadiusLayout>
+    </RadiusLayoutItem>
   );
 }

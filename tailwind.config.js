@@ -40,11 +40,12 @@ module.exports = {
       colors: {
         'gray-deep': '#333333',
         'gray-light': '#2b2a33',
+        'blue-regal': '#243c5a',
         'blue-green': '#22303f',
         'blue-light': '#17212b',
         'blue-deep': '#0e1621',
         'blue-sea': '#0d172b',
-        'regal-blue': '#243c5a',
+        'blue-slate': '#0f172a',
       },
       typography: () => ({
         DEFAULT: {

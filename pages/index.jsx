@@ -13,7 +13,7 @@ export default function Home({ list }) {
     <div>
       <Head4Page title={'DoveRank: Rank Something'} />
       <CoverHome />
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         {list?.map((content) => (
           <ContentItem key={content.slug} content={content} showBadge />
         ))}

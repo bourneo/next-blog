@@ -1,6 +1,6 @@
 import Document, { Head, Html, Main, NextScript } from 'next/document';
 
-const background_color = 'bg-blue-sea';
+const background_color = 'bg-blue-green';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx) {
@@ -10,7 +10,7 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en" className={`${background_color}`}>
+      <Html lang="en" className={`${background_color} `}>
         {/*Track and analysis*/}
         {/* <script async src="https://cdn.splitbee.io/sb.js" /> */}
         <Head></Head>

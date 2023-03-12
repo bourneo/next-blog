@@ -6,7 +6,7 @@ import Head4Content from '../../component/Head4Content';
 // Syntax highlight
 import 'prism-themes/themes/prism-vsc-dark-plus.css';
 import ContentAddition from '../../component/ContentAddition';
-import RadiusLayout from '../../component/RadiusLayout';
+import RadiusLayoutItem from '../../component/RadiusLayoutItem';
 import ContentProgressBar from '../../component/ContentProgressBar';
 
 export async function getStaticPaths() {
@@ -34,7 +34,7 @@ export default function BlogItem({ blog }) {
       {/*</div>*/}
       <ContentProgressBar />
 
-      <div className="max-w-3xl mx-auto ">
+      <div className="max-w-4xl mx-auto ">
         <div className="">
           {blog.coverPath && <CoverContent path={blog.coverPath} alt={blog.title} />}
         </div>
@@ -43,14 +43,14 @@ export default function BlogItem({ blog }) {
 
         <ContentAddition item={blog} />
 
-        <RadiusLayout>
-          <div className="py-8 max-w-2xl mx-auto prose dark:prose-invert ">
+        <RadiusLayoutItem>
+          <div className="py-8 max-w-4xl mx-auto prose dark:prose-invert ">
             <MDXRemote
               {...blog.content}
               components={{ img: (props) => <Image {...props} alt="" /> }}
             />
           </div>
-        </RadiusLayout>
+        </RadiusLayoutItem>
       </div>
     </div>
   );
