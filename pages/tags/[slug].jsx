@@ -29,7 +29,17 @@ export default function TagItem({ res }) {
     <div className="max-w-3xl mx-auto ">
       <Head4Page title={'DoveRank - ' + slug} />
 
-      <Banner banner="Tags" />
+      <div>
+        <div className="flex justify-center items-center ">
+          <div
+            className={`bg-cover bg-center bg-no-repeat bg-[url('/img/solar-system-4096x2304.jpg')]`}
+          >
+            <div className="flex justify-center items-center h-32 w-screen ">
+              <div className="text-xl text-white font-bold tracking-wider ">{slug}</div>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <TagSet list={list} />
 
