@@ -17,7 +17,7 @@ export default function ContentItem({ content, showBadge }) {
 
             {/*type date*/}
             <div className={`${text_color_gray}`}>
-              <div className="flex space-x-2 text-sm ">
+              <div className="flex item-center space-x-2 text-2xs ">
                 {showBadge && <TypeBadge type={content.type} />}
                 <div>{content.date}</div>
               </div>
@@ -31,7 +31,7 @@ export default function ContentItem({ content, showBadge }) {
             </div>
 
             {/*description*/}
-            <div className={`${text_color_gray} text-sm `}>
+            <div className={`${text_color_gray} text-xs `}>
               {content.description && <div>{content.description}</div>}
             </div>
 

@@ -45,7 +45,10 @@ export default function BlogItem({ blog }) {
 
         <RadiusLayout>
           <div className="py-8 max-w-2xl mx-auto prose dark:prose-invert ">
-            <MDXRemote {...blog.content} components={{ img: (props) => <Image {...props} /> }} />
+            <MDXRemote
+              {...blog.content}
+              components={{ img: (props) => <Image {...props} alt="" /> }}
+            />
           </div>
         </RadiusLayout>
       </div>

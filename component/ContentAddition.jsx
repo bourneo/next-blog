@@ -7,7 +7,7 @@ export default function ContentAddition({ item }) {
   return (
     <RadiusBoxLight>
       <div className={`${text_color_gray} py-3`}>
-        <span className="flex justify-center item-center space-x-2 text-sm">
+        <span className="flex justify-center item-center space-x-2 text-xs">
           <Calendar size="16" className="mt-1" />
           <span>{item.date}</span>
           <span>|</span>

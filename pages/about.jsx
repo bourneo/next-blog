@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { AtSign, GitHub, Send } from 'react-feather';
+import { GitHub, Send } from 'react-feather';
 import Head4Page from '../component/Head4Page';
-import Banner from '../component/Banner';
 import RadiusLayout from '../component/RadiusLayout';
 
 export default function About() {
@@ -37,13 +36,13 @@ export default function About() {
             <Link className="w-5 h-5" title="Telegram" href="/">
               <Send size="100%" stroke="gray" />
             </Link>
-            <Link className="w-5 h-5" title="Email" href="/">
-              <AtSign size="100%" stroke="gray" />
-            </Link>
             <Link className="w-5 h-5" title="GitHub" href="/">
               <GitHub size="100%" stroke="gray" />
             </Link>
           </div>
+          {/*<Link className="w-5 h-5" title="Email" href="/">*/}
+          {/*  <AtSign size="100%" stroke="gray" />*/}
+          {/*</Link>*/}
         </div>
       </RadiusLayout>
     </div>

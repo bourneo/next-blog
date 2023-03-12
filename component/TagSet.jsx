@@ -1,8 +1,6 @@
 import TagBadge from './TagBadge';
 import RadiusLayoutLight from './RadiusLayoutLight';
 
-const box_color = 'bg-slate-800';
-
 export default function TagSet({ list }) {
   return (
     <RadiusLayoutLight>

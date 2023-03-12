@@ -7,7 +7,7 @@ import NProgress from 'nprogress'; //nprogress module
 import 'nprogress/nprogress.css';
 import TopJumper from '../component/TopJumper';
 
-const background_color_body = 'bg-slate-800';
+const background_color_body = 'bg-blue-light';
 
 NProgress.configure({ showSpinner: false });
 //Route Events.

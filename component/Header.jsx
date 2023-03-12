@@ -30,9 +30,10 @@ export default function Header() {
   const { pathname } = router;
 
   const classMenuBase =
-    "flex items-center text-gray-300 hover:opacity-60 after:content-['·'] after:mx-3" +
+    "flex items-center text-gray-300 hover:opacity-70 after:content-['·'] after:mx-3" +
     ' last:after:hidden';
-  const classHiddenMenuBase = 'flex py-4 px-2 font-medium text-gray-300 hover:opacity-60';
+  const classHiddenMenuBase = 'flex py-4 px-2 font-medium text-gray-300 hover:opacity-70';
+  const highlightedMenu = 'brightness-150 font-bold';
 
   const [active, setActive] = useState(false);
   const toggle = () => setActive(!active);
@@ -66,7 +67,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className={pathname === item.href ? classMenuBase + ' opacity-60' : classMenuBase}
+              className={pathname === item.href ? classMenuBase + highlightedMenu : classMenuBase}
             >
               <MenuButton title={item.title} />
             </Link>
@@ -105,7 +106,7 @@ export default function Header() {
                   href={item.href}
                   className={
                     pathname === item.href
-                      ? classHiddenMenuBase + ' opacity-60'
+                      ? classHiddenMenuBase + highlightedMenu
                       : classHiddenMenuBase
                   }
                   onClick={handleLinkClick}

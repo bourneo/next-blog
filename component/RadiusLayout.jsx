@@ -1,4 +1,4 @@
-const background_box_color = 'bg-slate-900';
+const background_box_color = 'bg-blue-sea';
 
 export default function RadiusLayout({ children }) {
   return (

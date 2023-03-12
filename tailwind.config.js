@@ -31,13 +31,19 @@ module.exports = {
     fontSize: {
       '3xs': '0.5rem',
       '2xs': '0.6rem',
+      xs: '0.75rem',
       sm: '0.8rem',
       base: '1rem',
       xl: '1.25rem',
     },
     extend: {
       colors: {
-        regalGray: '#243c5a',
+        'gray-deep': '#333333',
+        'gray-light': '#2b2a33',
+        'blue-light': '#17212b',
+        'blue-deep': '#0e1621',
+        'blue-sea': '#0d172b',
+        'regal-blue': '#243c5a',
       },
       typography: () => ({
         DEFAULT: {

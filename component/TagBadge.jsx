@@ -1,17 +1,18 @@
 import Link from 'next/link';
 
-const text_color_dark = 'text-gray-800';
+const text_color_dark = 'text-gray-300';
+const background_color_blue = 'bg-regal-blue';
 
 export default function TagBadge({ tag }) {
   return (
-    <span className="hover:underline underline-offset-2">
-      <span className="px-2 py-1 rounded-md bg-blue-200 ">
-        <span className={`${text_color_dark} text-sm font-medium`}>
+    <div className={`${background_color_blue} px-2 py-1 rounded-lg `}>
+      <div className={`hover:opacity-70 `}>
+        <div className={`${text_color_dark} text-xs `}>
           <Link href="/tags/[tag]" as={`/tags/${tag}`}>
             {tag}
           </Link>
-        </span>
-      </span>
-    </span>
+        </div>
+      </div>
+    </div>
   );
 }
