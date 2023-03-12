@@ -1,5 +1,5 @@
 import { Calendar, Clock, Edit } from 'react-feather';
-import RadiusBoxLight from './RadiusLayoutLight';
+import RadiusBoxLight from './RadiusLayoutAddition';
 
 const text_color_gray = 'text-gray-300';
 

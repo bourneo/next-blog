@@ -1,5 +1,4 @@
 import Head4Page from '../../component/Head4Page';
-import Banner from '../../component/Banner';
 import { getListByTag } from '../../lib/common';
 import ContentItem from '../../component/ContentItem';
 import TagSet from '../../component/TagSet';
