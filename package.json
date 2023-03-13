@@ -10,6 +10,7 @@
     "export": "next export"
   },
   "dependencies": {
+    "@akebifiky/remark-simple-plantuml": "^1.0.2",
     "@headlessui/react": "^1.7.4",
     "@heroicons/react": "^2.0.13",
     "dayjs": "^1.10.4",
