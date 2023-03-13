@@ -28,10 +28,6 @@ export async function getStaticProps({ params }) {
 export default function BlogItem({ blog }) {
   return (
     <div>
-      {/*todo table*/}
-      {/*<div className="absolute right-0">*/}
-      {/*  <TableOfContents></TableOfContents>*/}
-      {/*</div>*/}
       <ContentProgressBar />
 
       <div className="max-w-5xl mx-auto ">
