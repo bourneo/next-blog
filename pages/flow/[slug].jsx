@@ -47,13 +47,7 @@ export default function FlowItem({ flow }) {
         </div>
       </RadiusLayoutItem>
 
-      {/*todo table*/}
-      <div className="">
-        {flow.table2.join('\n')}
-        {/*<div dangerouslySetInnerHTML={{ __html: blog.table }} />*/}
-        {/*<div>{blog.table.remarkToc}</div>*/}
-        {/*<TableOfContents></TableOfContents>*/}
-      </div>
+      {/*<ContentTable item={flow} />*/}
     </div>
   );
 }

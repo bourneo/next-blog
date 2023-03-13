@@ -27,27 +27,27 @@ export async function getStaticProps({ params }) {
 
 export default function BlogItem({ blog }) {
   return (
-    <div>
+    <div className="max-w-5xl mx-auto ">
       <ContentProgressBar />
 
-      <div className="max-w-5xl mx-auto ">
-        <div className="">
-          {blog.coverPath && <CoverContent path={blog.coverPath} alt={blog.title} />}
-        </div>
-
-        <Head4Content item={blog} />
-
-        <ContentAddition item={blog} />
-
-        <RadiusLayoutItem>
-          <div className="py-8 max-w-4xl mx-auto prose dark:prose-invert ">
-            <MDXRemote
-              {...blog.content}
-              components={{ img: (props) => <Image {...props} alt="" /> }}
-            />
-          </div>
-        </RadiusLayoutItem>
+      <div className="">
+        {blog.coverPath && <CoverContent path={blog.coverPath} alt={blog.title} />}
       </div>
+
+      <Head4Content item={blog} />
+
+      <ContentAddition item={blog} />
+
+      <RadiusLayoutItem>
+        <div className="py-8 max-w-4xl mx-auto prose dark:prose-invert ">
+          <MDXRemote
+            {...blog.content}
+            components={{ img: (props) => <Image {...props} alt="" /> }}
+          />
+        </div>
+      </RadiusLayoutItem>
+
+      {/*<ContentTable item={blog} />*/}
     </div>
   );
 }
