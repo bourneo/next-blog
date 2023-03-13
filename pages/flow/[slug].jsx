@@ -40,7 +40,7 @@ export default function FlowItem({ flow }) {
       <RadiusLayoutItem>
         <div className="py-8 max-w-4xl mx-auto prose dark:prose-invert ">
           <MDXRemote
-            {...flow.content}
+            {...flow.table}
             components={{
               // eslint-disable-next-line @next/next/no-img-element
               img: (props) => <img {...props} alt="" className="mx-auto rounded-md max-w-3xl " />,
@@ -48,6 +48,8 @@ export default function FlowItem({ flow }) {
           />
         </div>
       </RadiusLayoutItem>
+
+      {/*<ContentTable item={blog} />*/}
     </div>
   );
 }

@@ -19,7 +19,7 @@ eta: 1 min
 
 ---
 
-# How to disable the Count Badge of Source Control in VS Code
+## How to disable the Count Badge of Source Control in VS Code
 
 The count badge real disturbs me while I'm coding in VS Code, so I decide to disable it manually.
 

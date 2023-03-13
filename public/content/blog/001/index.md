@@ -19,11 +19,9 @@ eta: 0 min
 
 ---
 
-# FFmpeg Examples
+## FFmpeg Examples
 
----
-
-## FFmpeg
+### FFmpeg
 
 [comment]: <> (![img_test]&#40;/content/flow/0001/2023-03-03.jpg&#41;)
 
@@ -50,5 +48,17 @@ function groupBy(list, keyGetter) {
     }
   });
   return map;
+}
+```
+
+### plantuml
+
+The count badge real disturbs me while I'm coding in VS Code, so I decide to disable it manually.
+
+Search "Count Badge" in settings, change the value of the item, turn it off.
+
+```plantuml title
+class SimplePlantUMLPlugin {
+    + transform(syntaxTree: AST): AST
 }
 ```

@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { MDXRemote } from 'next-mdx-remote';
 import { getBlogBySlug, getBlogSlugList } from '../../lib/common';
 import CoverContent from '../../component/CoverContent';
@@ -41,8 +40,11 @@ export default function BlogItem({ blog }) {
       <RadiusLayoutItem>
         <div className="py-8 max-w-4xl mx-auto prose dark:prose-invert ">
           <MDXRemote
-            {...blog.content}
-            components={{ img: (props) => <Image {...props} alt="" /> }}
+            {...blog.table}
+            components={{
+              // eslint-disable-next-line @next/next/no-img-element
+              img: (props) => <img {...props} alt="" className="mx-auto rounded-md max-w-3xl " />,
+            }}
           />
         </div>
       </RadiusLayoutItem>
