@@ -3,6 +3,9 @@ import Link from 'next/link';
 import { GitHub, Send } from 'react-feather';
 import Head4Page from '../component/Head4Page';
 import RadiusLayoutItem from '../component/RadiusLayoutItem';
+import packageInfo from '../package.json';
+
+const text_color_deep = 'text-gray-400';
 
 export default function About() {
   return (
@@ -22,18 +25,25 @@ export default function About() {
       </div>
 
       <RadiusLayoutItem>
-        <div className="py-6">
-          <div className="flex justify-center item-center mb-8">
+        <div className="py-6 flex flex-col space-y-4">
+          <div className="m-auto">
             <Image
               className="rounded-2xl"
               src="/icon/output_512.jpg"
-              width={100}
-              height={100}
+              width={128}
+              height={128}
               alt="Avatar"
             />
           </div>
 
-          <div className="flex justify-center item-center space-x-4 smt-6">
+          <div className="m-auto flex flex-col">
+            <div className={`${text_color_deep} text-sm m-auto`}>
+              Copyright &copy; 2023 by DoveRank. All Rights Reserved.
+            </div>
+            <div className={`${text_color_deep} text-sm m-auto`}>{packageInfo.version}</div>
+          </div>
+
+          <div className="flex justify-center item-center space-x-3">
             <Link className="w-5 h-5" title="Telegram" href="/">
               <Send size="100%" stroke="gray" />
             </Link>
