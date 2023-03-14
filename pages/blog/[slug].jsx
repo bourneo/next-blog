@@ -40,7 +40,7 @@ export default function BlogItem({ blog }) {
       <RadiusLayoutItem>
         <div className="py-8 max-w-4xl mx-auto prose dark:prose-invert ">
           <MDXRemote
-            {...blog.table}
+            {...blog.content}
             components={{
               // eslint-disable-next-line @next/next/no-img-element
               img: (props) => <img {...props} alt="" className="mx-auto rounded-md max-w-3xl " />,

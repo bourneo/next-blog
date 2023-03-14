@@ -10,9 +10,9 @@ export default function ContentItem({ content, showBadge }) {
   return (
     // item on the list
     <RadiusLayoutItem>
-      <div className="flex px-2 md:px-8">
-        <div className="grow ">
-          <div className="py-3 space-y-3">
+      <div className="flex mx-2 md:mx-6">
+        <div className="grow mr-2">
+          <div className="y-3 space-y-3">
             <div className="">{/*todo cover*/}</div>
 
             {/*type date*/}

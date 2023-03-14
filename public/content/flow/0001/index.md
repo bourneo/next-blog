@@ -25,12 +25,6 @@ The count badge real disturbs me while I'm coding in VS Code, so I decide to dis
 
 Search "Count Badge" in settings, change the value of the item, turn it off.
 
-```plantuml title
-class SimplePlantUMLPlugin {
-    + transform(syntaxTree: AST): AST
-}
-```
-
 VS Code provides a number of options to customize you editor, it is a user-friendly tool for
 developers in this aspect.
 
