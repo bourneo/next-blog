@@ -1,6 +1,6 @@
 ---
 
-title: FFmpeg Examples
+title: Test Blog
 
 date: 2023-02-28
 
@@ -24,16 +24,6 @@ eta: 0 min
 ### FFmpeg test
 
 ![img_test](/content/flow/0001/2023-03-03.jpg)
-
-```javascript
-export const meta = {
-  title: 'FFmpeg 视频音频处理',
-  date: '2021-01-30 15:31:22',
-  author: 'DoveRank',
-  description: 'FFmpeg',
-  tags: 'FFmpeg',
-};
-```
 
 ```javascript
 function groupBy(list, keyGetter) {
