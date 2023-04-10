@@ -17,13 +17,11 @@ Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function MyApp({ Component, pageProps }) {
   return (
-    <div className="h-screen">
+    <div className='h-screen'>
       <Header />
 
       <div className={`${background_color_body} min-h-90% pb-1 `}>
         <Component {...pageProps} />
-        {/*{useScrollRestoration(Router)}*/}
-        {/*<BackToTop />*/}
         <TopJumper />
       </div>
 

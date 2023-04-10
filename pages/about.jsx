@@ -29,7 +29,7 @@ export default function About() {
           <div className="m-auto">
             <Image
               className="rounded-2xl"
-              src="/icon/output_512.jpg"
+              src="favicon.jpg"
               width={128}
               height={128}
               alt="Avatar"

@@ -10,13 +10,11 @@ export default class MyDocument extends Document {
 
   render() {
     return (
-      <Html lang="en" className={`${background_color} `}>
-        {/*Track and analysis*/}
-        {/* <script async src="https://cdn.splitbee.io/sb.js" /> */}
+      <Html lang='en' className={`${background_color} `}>
         <Head></Head>
         <body>
-          <Main />
-          <NextScript />
+        <Main />
+        <NextScript />
         </body>
       </Html>
     );
