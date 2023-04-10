@@ -4,9 +4,9 @@ const text_color_version = 'text-slate-900';
 
 export default function Footer() {
   return (
-    <footer className="flex flex-col text-2xs py-3 ">
+    <footer className='flex flex-col text-2xs py-3 '>
       <div className={`${text_color_gray} m-auto `}>
-        Copyright &copy; 2023 · DoveRank · All Rights Reserved
+        Copyright &copy; 2023 · DoveRank.com · All Rights Reserved
       </div>
 
       <div className={`${text_color_deep} m-auto mt-1 `}>

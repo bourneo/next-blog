@@ -38,7 +38,7 @@ export default function About() {
 
           <div className="m-auto flex flex-col">
             <div className={`${text_color_deep} text-sm m-auto`}>
-              Copyright &copy; 2023 by DoveRank. All Rights Reserved.
+              Copyright &copy; 2023 by DoveRank.com All Rights Reserved.
             </div>
             <div className={`${text_color_deep} text-sm m-auto`}>{packageInfo.version}</div>
           </div>
