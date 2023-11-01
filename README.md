@@ -52,4 +52,4 @@ Deploy the static files in `out` folder to your server.
 
 ## Reference
 
-Official Website: https://doverank.com
+Official Website: https://www.dovej.com
